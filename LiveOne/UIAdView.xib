@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIAdView">
+            <connections>
+                <outlet property="adlogImage" destination="YzW-ug-q4A" id="9RI-AS-gVD"/>
+                <outlet property="downButton" destination="80g-RX-g2X" id="7ag-zW-8se"/>
+                <outlet property="headerImage" destination="Zq9-iB-ahS" id="I8r-cP-Stl"/>
+                <outlet property="mainView" destination="iN0-l3-epB" id="8rE-AL-yij"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="216" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80g-RX-g2X">
+                    <rect key="frame" x="178" y="0.0" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="7v2-1i-W4Y">
+                            <variation key="widthClass=compact" constant="30"/>
+                        </constraint>
+                        <constraint firstAttribute="width" constant="39" id="qaa-Es-Iqk">
+                            <variation key="widthClass=compact" constant="30"/>
+                        </constraint>
+                    </constraints>
+                    <state key="normal" image="arrowdown.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="7v2-1i-W4Y"/>
+                            <exclude reference="qaa-Es-Iqk"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="7v2-1i-W4Y"/>
+                            <include reference="qaa-Es-Iqk"/>
+                        </mask>
+                    </variation>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swx" translatesAutoresizingMaskIntoConstraints="NO" id="Zq9-iB-ahS">
+                    <rect key="frame" x="4" y="10" width="58" height="20"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="WTl-1k-ngn">
+                            <variation key="heightClass=compact" constant="20"/>
+                            <variation key="widthClass=compact" constant="58"/>
+                        </constraint>
+                        <constraint firstAttribute="height" constant="20" id="am7-AS-ZYw"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MD" translatesAutoresizingMaskIntoConstraints="NO" id="YzW-ug-q4A">
+                    <rect key="frame" x="87.5" y="5" width="37" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="37" id="ouf-zo-0Nv"/>
+                        <constraint firstAttribute="height" constant="30" id="zRK-xD-ckl"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Zq9-iB-ahS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="315-8b-wJG">
+                    <variation key="heightClass=compact" constant="15"/>
+                </constraint>
+                <constraint firstItem="80g-RX-g2X" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="P8l-sZ-Zxm">
+                    <variation key="widthClass=compact" constant="25"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="80g-RX-g2X" secondAttribute="trailing" constant="3" id="YVZ-KZ-wMe">
+                    <variation key="widthClass=compact" constant="8"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="YzW-ug-q4A" secondAttribute="trailing" constant="10" id="eT7-B4-XV2"/>
+                <constraint firstItem="YzW-ug-q4A" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-2" id="eVq-9m-8mA"/>
+                <constraint firstItem="80g-RX-g2X" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="hsi-HF-cdZ">
+                    <variation key="widthClass=compact" constant="25"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="Zq9-iB-ahS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="iQk-ub-MD3"/>
+                <constraint firstItem="YzW-ug-q4A" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="jcl-PA-oiv"/>
+                <constraint firstItem="Zq9-iB-ahS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="mNV-vz-m6S"/>
+                <constraint firstAttribute="bottom" secondItem="80g-RX-g2X" secondAttribute="bottom" constant="3" id="mbT-5Q-FPG">
+                    <variation key="widthClass=compact" constant="35"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="80g-RX-g2X" secondAttribute="trailing" constant="8" id="rP5-do-aSb">
+                    <variation key="widthClass=compact" constant="8"/>
+                </constraint>
+                <constraint firstItem="Zq9-iB-ahS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="sSQ-8Y-jJ5"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="80g-RX-g2X"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="mNV-vz-m6S"/>
+                    <exclude reference="sSQ-8Y-jJ5"/>
+                    <exclude reference="eT7-B4-XV2"/>
+                    <exclude reference="P8l-sZ-Zxm"/>
+                    <exclude reference="YVZ-KZ-wMe"/>
+                    <exclude reference="hsi-HF-cdZ"/>
+                    <exclude reference="mbT-5Q-FPG"/>
+                    <exclude reference="rP5-do-aSb"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="80g-RX-g2X"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="315-8b-wJG"/>
+                    <include reference="P8l-sZ-Zxm"/>
+                    <include reference="YVZ-KZ-wMe"/>
+                    <include reference="hsi-HF-cdZ"/>
+                    <exclude reference="mbT-5Q-FPG"/>
+                    <include reference="rP5-do-aSb"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="sSQ-8Y-jJ5"/>
+                    <include reference="eT7-B4-XV2"/>
+                    <exclude reference="eVq-9m-8mA"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="mNV-vz-m6S"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="199" y="198"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="MD" width="300" height="250"/>
+        <image name="arrowdown.png" width="256" height="256"/>
+        <image name="swx" width="42" height="13"/>
+    </resources>
+</document>

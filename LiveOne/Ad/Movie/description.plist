@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Poster</key>
+	<string>poster.png</string>
+	<key>Name</key>
+	<string>name.png</string>
+	<key>Play Button</key>
+	<string>play_button.png</string>
+	<key>See</key>
+	<dict>
+		<key>Text</key>
+		<string>See the trailer</string>
+		<key>Font</key>
+		<dict>
+			<key>Name</key>
+			<string>HelveticaNeue-Bold</string>
+			<key>Size</key>
+			<integer>20</integer>
+			<key>Color</key>
+			<dict>
+				<key>Red</key>
+				<integer>246</integer>
+				<key>Green</key>
+				<integer>229</integer>
+				<key>Blue</key>
+				<integer>165</integer>
+			</dict>
+		</dict>
+	</dict>
+	<key>Where</key>
+	<dict>
+		<key>Text</key>
+		<string>IN THEATERS</string>
+		<key>Font</key>
+		<dict>
+			<key>Name</key>
+			<string>HelveticaNeue-Bold</string>
+			<key>Size</key>
+			<integer>14</integer>
+			<key>Color</key>
+			<dict>
+				<key>Red</key>
+				<integer>234</integer>
+				<key>Green</key>
+				<integer>204</integer>
+				<key>Blue</key>
+				<integer>75</integer>
+			</dict>
+		</dict>
+	</dict>
+	<key>Date</key>
+	<dict>
+		<key>Text</key>
+		<string>December 2017</string>
+		<key>Font</key>
+		<dict>
+			<key>Name</key>
+			<string>HelveticaNeue-Bold</string>
+			<key>Size</key>
+			<integer>23</integer>
+			<key>Color</key>
+			<dict>
+				<key>Red</key>
+				<integer>247</integer>
+				<key>Green</key>
+				<integer>234</integer>
+				<key>Blue</key>
+				<integer>181</integer>
+			</dict>
+		</dict>
+	</dict>
+	<key>Trailer Id</key>
+	<string>ACsUW98Byj8</string>
+</dict>
+</plist>
