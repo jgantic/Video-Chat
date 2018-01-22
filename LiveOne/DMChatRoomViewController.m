@@ -656,18 +656,40 @@ BOOL isShouldReturn = NO;
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             [formatter setDateFormat:@"HH:mma"];
             NSString *timeString = [theDate timeAgoSinceNow];
-        
-        
-            cell.userLabel.text = [[chatData objectAtIndex:row] objectForKey:@"userName"];
             
-            NSArray *nameArray = [cell.userLabel.text componentsSeparatedByString:@" "];
+            NSString *userName = [[chatData objectAtIndex:row] objectForKey:@"userName"];
+            
+            if (userName == nil) {
+                userName = @"Demo";
+            }
+            else {
+                userName = [userName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            }
+            
+            cell.userLabel.text = userName;
+            
+            NSArray *nameArray = [userName componentsSeparatedByString:@" "];
             if ([nameArray count]>1) {
-                NSString *first = [nameArray[0] substringToIndex:1];
-                NSString *second = [nameArray[1] substringToIndex:1];
+                
+                NSString *firstName = [nameArray[0] length] > 0 ? nameArray[0] : @"";
+                NSString *secondName = [nameArray[1] length] > 0 ? nameArray[1] : @"";
+                
+                NSString *first = @"";
+                if ([firstName length] > 0) {
+                    first = [firstName substringToIndex:1];
+                }
+                
+                NSString *second = @"";
+                if ([secondName length] > 0) {
+                    second = [secondName substringToIndex:1];
+                }
                 [cell.nameButton setTitle:[[first uppercaseString] stringByAppendingString:[second uppercaseString]]  forState:UIControlStateNormal];
-            } else {
-                NSString *first = nameArray[0];
-//                [cell.nameButton setTitle:[[first uppercaseString] substringToIndex:1]  forState:UIControlStateNormal];
+            } else if ([nameArray count]>0) {
+                NSString *first = [nameArray[0] length] > 0 ? nameArray[0] : @"";
+                
+                if ([first length] > 0) {
+                    [cell.nameButton setTitle:[[first uppercaseString] substringToIndex:1]  forState:UIControlStateNormal];
+                }
             }
         
             [cell.userLabel sizeToFit];
