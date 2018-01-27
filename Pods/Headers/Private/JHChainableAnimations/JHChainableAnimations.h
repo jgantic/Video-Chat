@@ -1,1 +1,1 @@
-../../../JHChainableAnimations/JHChainableAnimations/JHChainableAnimations.h
+../../../JHChainableAnimations/Frameworks-iOS/JHChainableAnimations.h

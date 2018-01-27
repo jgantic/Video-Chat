@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APPChildViewController">
             <connections>
+                <outlet property="cmpPctLabel" destination="42Q-WS-Oxi" id="U4U-UY-q77"/>
+                <outlet property="completionsLabel" destination="YMq-Fv-6Dl" id="dQi-5K-l55"/>
                 <outlet property="image" destination="hcu-st-cao" id="phX-m2-FKr"/>
+                <outlet property="nameLabel" destination="3um-Sb-iIt" id="sde-M0-mCT"/>
+                <outlet property="ratingLabel" destination="GuC-y4-zaR" id="ryJ-yp-YR5"/>
                 <outlet property="screenNumber" destination="4" id="14"/>
+                <outlet property="statView" destination="QAr-nj-lTB" id="DNl-zE-elG"/>
+                <outlet property="touchdownsLabel" destination="O7z-1C-B2N" id="5cK-0I-3IA"/>
                 <outlet property="view" destination="1" id="3"/>
+                <outlet property="yardsLabel" destination="5GS-WD-KdV" id="XGO-BZ-nih"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -24,8 +31,70 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="statistics" translatesAutoresizingMaskIntoConstraints="NO" id="hcu-st-cao">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="364"/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAr-nj-lTB" userLabel="Stat View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="380"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3um-Sb-iIt" userLabel="Name Label">
+                            <rect key="frame" x="10" y="10" width="300" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuC-y4-zaR" userLabel="Rating Label">
+                            <rect key="frame" x="10" y="41" width="300" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GS-WD-KdV" userLabel="Yards Label">
+                            <rect key="frame" x="10" y="72" width="300" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMq-Fv-6Dl" userLabel="Completions Label">
+                            <rect key="frame" x="10" y="103" width="300" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42Q-WS-Oxi" userLabel="CmpPct Label">
+                            <rect key="frame" x="10" y="134" width="300" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7z-1C-B2N" userLabel="Touchdowns Label">
+                            <rect key="frame" x="10" y="165" width="300" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="YMq-Fv-6Dl" firstAttribute="trailing" secondItem="3um-Sb-iIt" secondAttribute="trailing" id="0k7-DR-6LC"/>
+                        <constraint firstItem="O7z-1C-B2N" firstAttribute="leading" secondItem="3um-Sb-iIt" secondAttribute="leading" id="12f-Oz-Y5b"/>
+                        <constraint firstItem="O7z-1C-B2N" firstAttribute="trailing" secondItem="3um-Sb-iIt" secondAttribute="trailing" id="1ya-Zr-Llx"/>
+                        <constraint firstItem="42Q-WS-Oxi" firstAttribute="leading" secondItem="3um-Sb-iIt" secondAttribute="leading" id="7OV-fc-f1a"/>
+                        <constraint firstItem="5GS-WD-KdV" firstAttribute="top" secondItem="GuC-y4-zaR" secondAttribute="bottom" constant="10" id="DcZ-L3-adu"/>
+                        <constraint firstItem="42Q-WS-Oxi" firstAttribute="trailing" secondItem="3um-Sb-iIt" secondAttribute="trailing" id="Hfc-T0-bdW"/>
+                        <constraint firstItem="5GS-WD-KdV" firstAttribute="leading" secondItem="3um-Sb-iIt" secondAttribute="leading" id="KNe-R0-oVM"/>
+                        <constraint firstItem="5GS-WD-KdV" firstAttribute="trailing" secondItem="3um-Sb-iIt" secondAttribute="trailing" id="M4I-4x-h3Z"/>
+                        <constraint firstItem="3um-Sb-iIt" firstAttribute="top" secondItem="QAr-nj-lTB" secondAttribute="top" constant="10" id="VBB-7g-C17"/>
+                        <constraint firstItem="GuC-y4-zaR" firstAttribute="top" secondItem="3um-Sb-iIt" secondAttribute="bottom" constant="10" id="Yl2-xS-eH5"/>
+                        <constraint firstItem="YMq-Fv-6Dl" firstAttribute="leading" secondItem="3um-Sb-iIt" secondAttribute="leading" id="cOc-Md-NJa"/>
+                        <constraint firstItem="GuC-y4-zaR" firstAttribute="trailing" secondItem="3um-Sb-iIt" secondAttribute="trailing" id="e10-zQ-G3Y"/>
+                        <constraint firstItem="YMq-Fv-6Dl" firstAttribute="top" secondItem="5GS-WD-KdV" secondAttribute="bottom" constant="10" id="g4f-tz-6iG"/>
+                        <constraint firstItem="42Q-WS-Oxi" firstAttribute="top" secondItem="YMq-Fv-6Dl" secondAttribute="bottom" constant="10" id="hYF-DL-qLS"/>
+                        <constraint firstItem="O7z-1C-B2N" firstAttribute="top" secondItem="42Q-WS-Oxi" secondAttribute="bottom" constant="10" id="iMl-jb-EnI"/>
+                        <constraint firstItem="GuC-y4-zaR" firstAttribute="leading" secondItem="3um-Sb-iIt" secondAttribute="leading" id="iOD-NU-bpG"/>
+                        <constraint firstAttribute="trailing" secondItem="3um-Sb-iIt" secondAttribute="trailing" constant="10" id="ldG-jG-S0q"/>
+                        <constraint firstItem="3um-Sb-iIt" firstAttribute="leading" secondItem="QAr-nj-lTB" secondAttribute="leading" constant="10" id="zD1-PP-fHE"/>
+                    </constraints>
+                </view>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Screen #n" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4">
-                    <rect key="frame" x="75" y="109" width="170" height="73"/>
+                    <rect key="frame" x="77.5" y="109" width="165.5" height="73"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="73" id="9"/>
                     </constraints>
@@ -38,10 +107,14 @@
             <constraints>
                 <constraint firstItem="4" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="11"/>
                 <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" constant="109" id="13"/>
+                <constraint firstItem="QAr-nj-lTB" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="1s7-aZ-zW1"/>
                 <constraint firstItem="hcu-st-cao" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="5Mw-VI-SQb"/>
                 <constraint firstAttribute="trailing" secondItem="hcu-st-cao" secondAttribute="trailing" id="5tN-04-hZx"/>
+                <constraint firstAttribute="trailing" secondItem="QAr-nj-lTB" secondAttribute="trailing" id="5vp-2s-yqg"/>
+                <constraint firstItem="QAr-nj-lTB" firstAttribute="top" secondItem="1" secondAttribute="top" id="8VU-yN-sZy"/>
                 <constraint firstAttribute="bottom" secondItem="hcu-st-cao" secondAttribute="bottom" constant="16" id="ANk-rE-dzb"/>
                 <constraint firstItem="hcu-st-cao" firstAttribute="top" secondItem="1" secondAttribute="top" id="dOl-N6-t5o"/>
+                <constraint firstAttribute="bottom" secondItem="QAr-nj-lTB" secondAttribute="bottom" id="ybv-yE-vYm"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
@@ -49,9 +122,4 @@
     <resources>
         <image name="statistics" width="287" height="364"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>

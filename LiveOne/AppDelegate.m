@@ -13,7 +13,6 @@
 #import <TwitterKit/TwitterKit.h>
 #import <Instabug/Instabug.h>
 
-
 @interface AppDelegate ()
 
 @end
@@ -22,7 +21,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+
     //Set Fabric Kit
     [Fabric with:@[CrashlyticsKit, TwitterKit]];
     //

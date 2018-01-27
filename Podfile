@@ -1,7 +1,7 @@
 
 platform :ios, '8.0'
 
-target 'LiveOne' do
+target 'SZZL' do
 pod 'XCDYouTubeKit', '~> 2.5'
 pod 'OCMock'
 pod 'RKDropdownAlert'
@@ -13,7 +13,7 @@ pod 'CocoaHTTPServer'
 pod 'DTCoreText', '~> 1.6.11'
 pod 'Specta',      '~> 0.2.1'
 pod 'Expecta',     '~> 0.3.0'
-pod 'AMPopTip'
+pod 'AMPopTip', '~> 1.5.2'
 pod 'CocoaHTTPServer'
 pod 'DCAnimationKit'
 pod 'MaryPopin'

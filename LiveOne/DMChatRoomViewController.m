@@ -662,12 +662,21 @@ BOOL isShouldReturn = NO;
             
             NSArray *nameArray = [cell.userLabel.text componentsSeparatedByString:@" "];
             if ([nameArray count]>1) {
-                NSString *first = [nameArray[0] substringToIndex:1];
-                NSString *second = [nameArray[1] substringToIndex:1];
-                [cell.nameButton setTitle:[[first uppercaseString] stringByAppendingString:[second uppercaseString]]  forState:UIControlStateNormal];
+              NSString *first = @"";
+              if (nameArray[0] != nil && [nameArray[0] length] > 0) {
+                first = [nameArray[0] substringToIndex:1];
+              }
+              NSString *second = @"";
+              if (nameArray[1] != nil && [nameArray[1] length] > 0) {
+                second = [nameArray[1] substringToIndex:1];
+              }
+              [cell.nameButton setTitle:[[first uppercaseString] stringByAppendingString:[second uppercaseString]]  forState:UIControlStateNormal];
             } else {
-                NSString *first = nameArray[0];
-//                [cell.nameButton setTitle:[[first uppercaseString] substringToIndex:1]  forState:UIControlStateNormal];
+              NSString *first = @"";
+              if (nameArray[0] != nil && [nameArray[0] length] > 0) {
+                first = nameArray[0];
+              }
+              [cell.nameButton setTitle:[[first uppercaseString] substringToIndex:1]  forState:UIControlStateNormal];
             }
         
             [cell.userLabel sizeToFit];
