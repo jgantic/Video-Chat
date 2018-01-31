@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		47864BE4A0DB7385BD2F510E /* libPods-LiveOne.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB4F2C4C918A62B7AE0D226 /* libPods-LiveOne.a */; };
 		5D2221C51F9474E600B1713E /* Ad in Resources */ = {isa = PBXBuildFile; fileRef = 5D2221C41F9474E600B1713E /* Ad */; };
 		5D2221C81F947EF100B1713E /* Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2221C71F947EF100B1713E /* Extensions.m */; };
 		5D2942B81F7BA139006C9CD9 /* VideoSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2942B71F7BA139006C9CD9 /* VideoSideViewController.m */; };
@@ -766,7 +765,6 @@
 				C3BF20171B77676800B36DD4 /* MapKit.framework in Frameworks */,
 				C3B2AED31B7371990071882C /* Fabric.framework in Frameworks */,
 				C3B2AED81B7371F70071882C /* TwitterKit.framework in Frameworks */,
-				47864BE4A0DB7385BD2F510E /* libPods-LiveOne.a in Frameworks */,
 				BFBADC4A662FF6C92FF36BF3 /* libPods-SZZL.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
