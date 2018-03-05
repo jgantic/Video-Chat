@@ -1,0 +1,6 @@
+framework module Pods_SZZL {
+  umbrella header "Pods-SZZL-umbrella.h"
+
+  export *
+  module * { export * }
+}

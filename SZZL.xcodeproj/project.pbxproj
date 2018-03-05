@@ -32,7 +32,7 @@
 		5DE375451FA8820300FD7B8D /* survey_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DE375421FA881FD00FD7B8D /* survey_header.png */; };
 		5DE375461FA8820300FD7B8D /* survey_team2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DE375431FA881FF00FD7B8D /* survey_team2.png */; };
 		5DE375471FA8820300FD7B8D /* survey_team1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DE375441FA8820100FD7B8D /* survey_team1.png */; };
-		BFBADC4A662FF6C92FF36BF3 /* libPods-SZZL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E4123D4676253476407034 /* libPods-SZZL.a */; };
+		9382EA21BFBD6ED06A0996B8 /* libPods-SZZL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A7598A77E7B4784FB79C18 /* libPods-SZZL.a */; };
 		C300CB2A1BC7D9FE0081C9BB /* crown3.png in Resources */ = {isa = PBXBuildFile; fileRef = C300CB271BC7D9FE0081C9BB /* crown3.png */; };
 		C300CB2B1BC7D9FE0081C9BB /* crown2.png in Resources */ = {isa = PBXBuildFile; fileRef = C300CB281BC7D9FE0081C9BB /* crown2.png */; };
 		C300CB2C1BC7D9FE0081C9BB /* crown1.png in Resources */ = {isa = PBXBuildFile; fileRef = C300CB291BC7D9FE0081C9BB /* crown1.png */; };
@@ -332,7 +332,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		45E4123D4676253476407034 /* libPods-SZZL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SZZL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E8625FE2B09071AAF564D16 /* Pods-SZZL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZZL.release.xcconfig"; path = "Pods/Target Support Files/Pods-SZZL/Pods-SZZL.release.xcconfig"; sourceTree = "<group>"; };
 		5D2221C41F9474E600B1713E /* Ad */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Ad; sourceTree = "<group>"; };
 		5D2221C61F947EF100B1713E /* Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Extensions.h; sourceTree = "<group>"; };
@@ -365,6 +364,7 @@
 		5DE375421FA881FD00FD7B8D /* survey_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = survey_header.png; sourceTree = "<group>"; };
 		5DE375431FA881FF00FD7B8D /* survey_team2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = survey_team2.png; sourceTree = "<group>"; };
 		5DE375441FA8820100FD7B8D /* survey_team1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = survey_team1.png; sourceTree = "<group>"; };
+		B9A7598A77E7B4784FB79C18 /* libPods-SZZL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SZZL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C300CB271BC7D9FE0081C9BB /* crown3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crown3.png; sourceTree = "<group>"; };
 		C300CB281BC7D9FE0081C9BB /* crown2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crown2.png; sourceTree = "<group>"; };
 		C300CB291BC7D9FE0081C9BB /* crown1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crown1.png; sourceTree = "<group>"; };
@@ -765,7 +765,7 @@
 				C3BF20171B77676800B36DD4 /* MapKit.framework in Frameworks */,
 				C3B2AED31B7371990071882C /* Fabric.framework in Frameworks */,
 				C3B2AED81B7371F70071882C /* TwitterKit.framework in Frameworks */,
-				BFBADC4A662FF6C92FF36BF3 /* libPods-SZZL.a in Frameworks */,
+				9382EA21BFBD6ED06A0996B8 /* libPods-SZZL.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,7 +815,7 @@
 				C3BF20161B77676800B36DD4 /* MapKit.framework */,
 				C3BF20031B775C1100B36DD4 /* CoreLocation.framework */,
 				CBB4F2C4C918A62B7AE0D226 /* libPods-LiveOne.a */,
-				45E4123D4676253476407034 /* libPods-SZZL.a */,
+				B9A7598A77E7B4784FB79C18 /* libPods-SZZL.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2122,9 +2122,62 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SZZL/Pods-SZZL-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/AMPopTip/AMPopTip.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaHTTPServer/CocoaHTTPServer.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/DAKeyboardControl/DAKeyboardControl.framework",
+				"${BUILT_PRODUCTS_DIR}/DCAnimationKit/DCAnimationKit.framework",
+				"${BUILT_PRODUCTS_DIR}/DTCoreText/DTCoreText.framework",
+				"${BUILT_PRODUCTS_DIR}/DTFoundation/DTFoundation.framework",
+				"${BUILT_PRODUCTS_DIR}/DateTools/DateTools.framework",
+				"${BUILT_PRODUCTS_DIR}/Expecta/Expecta.framework",
+				"${BUILT_PRODUCTS_DIR}/FXImageView/FXImageView.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/JHChainableAnimations/JHChainableAnimations.framework",
+				"${BUILT_PRODUCTS_DIR}/MZAppearance/MZAppearance.framework",
+				"${BUILT_PRODUCTS_DIR}/MZFormSheetController/MZFormSheetController.framework",
+				"${BUILT_PRODUCTS_DIR}/MaryPopin/MaryPopin.framework",
+				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/RKDropdownAlert/RKDropdownAlert.framework",
+				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Specta/Specta.framework",
+				"${BUILT_PRODUCTS_DIR}/UIColor+Hex/UIColor_Hex.framework",
+				"${BUILT_PRODUCTS_DIR}/VKFoundation/VKFoundation.framework",
+				"${BUILT_PRODUCTS_DIR}/XCDYouTubeKit/XCDYouTubeKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMPopTip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaHTTPServer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DAKeyboardControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DCAnimationKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTCoreText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateTools.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FXImageView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JHChainableAnimations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZAppearance.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZFormSheetController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaryPopin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RKDropdownAlert.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Specta.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VKFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCDYouTubeKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

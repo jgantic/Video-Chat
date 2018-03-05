@@ -1902,7 +1902,7 @@ float bearing = 0.0;
 }
 
 - (void)playVideo {
-    NSString *videoIdentifier = @"gUl31kmzwCo"; // A 11 characters YouTube video identifier
+    NSString *videoIdentifier = @"RIZdjT1472Y"; // A 11 characters YouTube video identifier
     [[XCDYouTubeClient defaultClient] getVideoWithIdentifier:videoIdentifier completionHandler:^(XCDYouTubeVideo *video, NSError *error) {
         
         
