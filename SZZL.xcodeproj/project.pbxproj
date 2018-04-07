@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D0C1F9920763B1200A9D687 /* menu-start.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0C1F9820763B1100A9D687 /* menu-start.png */; };
+		5D0C1F9C20763D1300A9D687 /* AdTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C1F9B20763D1300A9D687 /* AdTopBar.m */; };
+		5D0C1F9F2076417200A9D687 /* twitter-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0C1F9E2076417200A9D687 /* twitter-white.png */; };
+		5D0C1FA0207644AB00A9D687 /* AdTopBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D0C1F9D20763D3B00A9D687 /* AdTopBar.xib */; };
+		5D0C1FA620764A1A00A9D687 /* honeywell.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0C1FA520764A1A00A9D687 /* honeywell.png */; };
 		5D2221C51F9474E600B1713E /* Ad in Resources */ = {isa = PBXBuildFile; fileRef = 5D2221C41F9474E600B1713E /* Ad */; };
 		5D2221C81F947EF100B1713E /* Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2221C71F947EF100B1713E /* Extensions.m */; };
 		5D2942B81F7BA139006C9CD9 /* VideoSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2942B71F7BA139006C9CD9 /* VideoSideViewController.m */; };
 		5D44D0D41F7A1A63008D1FA9 /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D44D0D31F7A1A63008D1FA9 /* AnimationView.m */; };
+		5D5087962076527D00ADA168 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5087952076527D00ADA168 /* RegistrationViewController.m */; };
+		5D50879D207881EF00ADA168 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D50879C207881EF00ADA168 /* StoreViewController.m */; };
+		5D5087A0207886E500ADA168 /* StoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D50879F207886E500ADA168 /* StoreTableViewCell.m */; };
+		5D5087A220788D5A00ADA168 /* LYNX.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D5087A120788D5800ADA168 /* LYNX.png */; };
 		5D5259B91F665C7A00A26F98 /* ad.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D5259B81F665C7400A26F98 /* ad.png */; };
 		5D52DDE61F6BB91D0090DC2E /* AdSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D52DDE51F6BB91D0090DC2E /* AdSideViewController.m */; };
 		5D572B231FA3162300A9DE68 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D572B211FA3161F00A9DE68 /* UIImage+animatedGIF.m */; };
@@ -22,6 +31,11 @@
 		5DB182F21F86611D0075BB2D /* backspace.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB182F11F86611D0075BB2D /* backspace.png */; };
 		5DD1CEF71F8205E40067F66C /* adShopLogo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD1CEF51F8205DD0067F66C /* adShopLogo1.png */; };
 		5DD1CEF81F8205E60067F66C /* adShopLogo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD1CEF61F8205DF0067F66C /* adShopLogo2.png */; };
+		5DD33E8A20739635001118EA /* menu-cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD33E8620739630001118EA /* menu-cart.png */; };
+		5DD33E8B20739635001118EA /* menu-chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD33E8720739631001118EA /* menu-chat.png */; };
+		5DD33E8C20739635001118EA /* menu-reg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD33E8820739633001118EA /* menu-reg.png */; };
+		5DD33E8D20739635001118EA /* menu-twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD33E8920739635001118EA /* menu-twitter.png */; };
+		5DD33E9120739AAF001118EA /* MenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD33E9020739AAF001118EA /* MenuButton.m */; };
 		5DD992C51F711DD800486CAF /* cross@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD992C21F711DCF00486CAF /* cross@3x.png */; };
 		5DD992C61F711DD800486CAF /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD992C31F711DD100486CAF /* cross@2x.png */; };
 		5DD992C71F711DD800486CAF /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD992C41F711DD400486CAF /* cross.png */; };
@@ -333,6 +347,12 @@
 
 /* Begin PBXFileReference section */
 		4E8625FE2B09071AAF564D16 /* Pods-SZZL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZZL.release.xcconfig"; path = "Pods/Target Support Files/Pods-SZZL/Pods-SZZL.release.xcconfig"; sourceTree = "<group>"; };
+		5D0C1F9820763B1100A9D687 /* menu-start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-start.png"; sourceTree = "<group>"; };
+		5D0C1F9A20763D1300A9D687 /* AdTopBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdTopBar.h; sourceTree = "<group>"; };
+		5D0C1F9B20763D1300A9D687 /* AdTopBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdTopBar.m; sourceTree = "<group>"; };
+		5D0C1F9D20763D3B00A9D687 /* AdTopBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AdTopBar.xib; path = /Users/vas/Documents/John/SZZL/LiveOne/AdTopBar.xib; sourceTree = "<absolute>"; };
+		5D0C1F9E2076417200A9D687 /* twitter-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-white.png"; sourceTree = "<group>"; };
+		5D0C1FA520764A1A00A9D687 /* honeywell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = honeywell.png; sourceTree = "<group>"; };
 		5D2221C41F9474E600B1713E /* Ad */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Ad; sourceTree = "<group>"; };
 		5D2221C61F947EF100B1713E /* Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Extensions.h; sourceTree = "<group>"; };
 		5D2221C71F947EF100B1713E /* Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Extensions.m; sourceTree = "<group>"; };
@@ -340,6 +360,13 @@
 		5D2942B71F7BA139006C9CD9 /* VideoSideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoSideViewController.m; sourceTree = "<group>"; };
 		5D44D0D21F7A1A63008D1FA9 /* AnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationView.h; sourceTree = "<group>"; };
 		5D44D0D31F7A1A63008D1FA9 /* AnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationView.m; sourceTree = "<group>"; };
+		5D5087942076527D00ADA168 /* RegistrationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		5D5087952076527D00ADA168 /* RegistrationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		5D50879B207881EF00ADA168 /* StoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
+		5D50879C207881EF00ADA168 /* StoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
+		5D50879E207886E500ADA168 /* StoreTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreTableViewCell.h; sourceTree = "<group>"; };
+		5D50879F207886E500ADA168 /* StoreTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreTableViewCell.m; sourceTree = "<group>"; };
+		5D5087A120788D5800ADA168 /* LYNX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LYNX.png; sourceTree = "<group>"; };
 		5D5259B81F665C7400A26F98 /* ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ad.png; sourceTree = "<group>"; };
 		5D52DDE41F6BB91D0090DC2E /* AdSideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdSideViewController.h; sourceTree = "<group>"; };
 		5D52DDE51F6BB91D0090DC2E /* AdSideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdSideViewController.m; sourceTree = "<group>"; };
@@ -354,6 +381,12 @@
 		5DB182F11F86611D0075BB2D /* backspace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backspace.png; sourceTree = "<group>"; };
 		5DD1CEF51F8205DD0067F66C /* adShopLogo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adShopLogo1.png; sourceTree = "<group>"; };
 		5DD1CEF61F8205DF0067F66C /* adShopLogo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adShopLogo2.png; sourceTree = "<group>"; };
+		5DD33E8620739630001118EA /* menu-cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-cart.png"; sourceTree = "<group>"; };
+		5DD33E8720739631001118EA /* menu-chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-chat.png"; sourceTree = "<group>"; };
+		5DD33E8820739633001118EA /* menu-reg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-reg.png"; sourceTree = "<group>"; };
+		5DD33E8920739635001118EA /* menu-twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-twitter.png"; sourceTree = "<group>"; };
+		5DD33E8F20739AAF001118EA /* MenuButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuButton.h; sourceTree = "<group>"; };
+		5DD33E9020739AAF001118EA /* MenuButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuButton.m; sourceTree = "<group>"; };
 		5DD992C21F711DCF00486CAF /* cross@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@3x.png"; sourceTree = "<group>"; };
 		5DD992C31F711DD100486CAF /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
 		5DD992C41F711DD400486CAF /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
@@ -833,6 +866,15 @@
 				5D2221C71F947EF100B1713E /* Extensions.m */,
 				5D782AD81FA868B5003C4D31 /* SurveySideViewController.h */,
 				5D782AD91FA868B5003C4D31 /* SurveySideViewController.m */,
+				5D0C1F9A20763D1300A9D687 /* AdTopBar.h */,
+				5D0C1F9B20763D1300A9D687 /* AdTopBar.m */,
+				5D0C1F9D20763D3B00A9D687 /* AdTopBar.xib */,
+				5D5087942076527D00ADA168 /* RegistrationViewController.h */,
+				5D5087952076527D00ADA168 /* RegistrationViewController.m */,
+				5D50879B207881EF00ADA168 /* StoreViewController.h */,
+				5D50879C207881EF00ADA168 /* StoreViewController.m */,
+				5D50879E207886E500ADA168 /* StoreTableViewCell.h */,
+				5D50879F207886E500ADA168 /* StoreTableViewCell.m */,
 			);
 			name = Ad;
 			sourceTree = "<group>";
@@ -844,6 +886,27 @@
 				5D572B211FA3161F00A9DE68 /* UIImage+animatedGIF.m */,
 			);
 			name = "Animated GIF";
+			sourceTree = "<group>";
+		};
+		5DD33E85207395C9001118EA /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				5DD33E8620739630001118EA /* menu-cart.png */,
+				5DD33E8720739631001118EA /* menu-chat.png */,
+				5DD33E8820739633001118EA /* menu-reg.png */,
+				5DD33E8920739635001118EA /* menu-twitter.png */,
+				5D0C1F9820763B1100A9D687 /* menu-start.png */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		5DD33E8E20739A7A001118EA /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				5DD33E8F20739AAF001118EA /* MenuButton.h */,
+				5DD33E9020739AAF001118EA /* MenuButton.m */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 		5DFDEEB61F5FBE6D002777B1 /* Ad */ = {
@@ -973,6 +1036,7 @@
 		C38064FB1B7655F000328169 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5DD33E8E20739A7A001118EA /* Menu */,
 				ECA0ED851E66E141007CC35D /* stats */,
 				EC055D341E43D10500867934 /* successViewController */,
 				EC055D331E43D0EC00867934 /* confirmViewController */,
@@ -1172,9 +1236,13 @@
 		C380651E1B76649C00328169 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5DD33E85207395C9001118EA /* Menu */,
 				5D2221C41F9474E600B1713E /* Ad */,
 				5DFDEEB61F5FBE6D002777B1 /* Ad */,
 				C31E0A391D0437FB00CE9690 /* instagram */,
+				5D0C1F9E2076417200A9D687 /* twitter-white.png */,
+				5D0C1FA520764A1A00A9D687 /* honeywell.png */,
+				5D5087A120788D5800ADA168 /* LYNX.png */,
 				C32FBC761CF20583007E8DFA /* arrowdown.png */,
 				C32FBC741CF2006D007E8DFA /* imaginedragons.jpg */,
 				C300CB271BC7D9FE0081C9BB /* crown3.png */,
@@ -1875,6 +1943,7 @@
 				C3AE81EA1B78AB5C0058E217 /* VKVideoPlayerViewController~ipad.xib in Resources */,
 				C35696141BA2E287004F1495 /* instagramF@2x.png in Resources */,
 				C38EC6441B8BB53E00771B2E /* chat-white.png in Resources */,
+				5D0C1F9920763B1200A9D687 /* menu-start.png in Resources */,
 				C38065391B7664B100328169 /* Icon-40@3x.png in Resources */,
 				ECA0ED8F1E66E15E007CC35D /* APPViewController.xib in Resources */,
 				C32170A31BA9934E008EA49B /* crowd-hightlight.png in Resources */,
@@ -1890,6 +1959,8 @@
 				C321709B1BA98A22008EA49B /* crowd-white-hightlight.png in Resources */,
 				C3F11C991BA713150024A88D /* star-active.png in Resources */,
 				C380653F1B7664B100328169 /* Icon-Small@2x.png in Resources */,
+				5D0C1FA620764A1A00A9D687 /* honeywell.png in Resources */,
+				5D5087A220788D5A00ADA168 /* LYNX.png in Resources */,
 				C3B2AED91B7371F70071882C /* TwitterKitResources.bundle in Resources */,
 				C37269101B837BB4004E59D8 /* store-op.png in Resources */,
 				5D2221C51F9474E600B1713E /* Ad in Resources */,
@@ -1913,6 +1984,7 @@
 				C34A91E61BA83A0000724F1A /* chatCell.xib in Resources */,
 				C3A795101B99ED5E0083BD72 /* crown.png in Resources */,
 				C38EC6351B8B7FC500771B2E /* marker-stroked-24@2x.png in Resources */,
+				5D0C1FA0207644AB00A9D687 /* AdTopBar.xib in Resources */,
 				C380653E1B7664B100328169 /* Icon-Small.png in Resources */,
 				C3227B2C1BAED0A30073BAC1 /* fill-messages@3x.png in Resources */,
 				C31E0A501D048B4900CE9690 /* oval@3x.png in Resources */,
@@ -1930,6 +2002,7 @@
 				C31E0A521D048B4A00CE9690 /* oval.png in Resources */,
 				C35696131BA2E287004F1495 /* instagramF@3x.png in Resources */,
 				EC36CCFE1E235C6F00B8D2DE /* insta5.jpg in Resources */,
+				5DD33E8B20739635001118EA /* menu-chat.png in Resources */,
 				C3227B391BAEDF3A0073BAC1 /* fanduelinline.png in Resources */,
 				C3AE82101B78AEC00058E217 /* VKVideoPlayer_rewind@2x.png in Resources */,
 				C3AE820D1B78AEC00058E217 /* VKVideoPlayer_play.png in Resources */,
@@ -1971,6 +2044,7 @@
 				C300CB2B1BC7D9FE0081C9BB /* crown2.png in Resources */,
 				5D5259B91F665C7A00A26F98 /* ad.png in Resources */,
 				C3B2AEBB1B736E8A0071882C /* LaunchScreen.xib in Resources */,
+				5DD33E8A20739635001118EA /* menu-cart.png in Resources */,
 				ECDA4C3C1E60777B00233B50 /* BetView.xib in Resources */,
 				5D59DE741F88B233003A2726 /* arrow_back.png in Resources */,
 				C356961A1BA2F03A004F1495 /* like@2x.png in Resources */,
@@ -1983,6 +2057,7 @@
 				C3A7950C1B99EC200083BD72 /* marker1@3x.png in Resources */,
 				C3B2AEF81B73934F0071882C /* icon_arrow_up.png in Resources */,
 				C37269011B836C6B004E59D8 /* twitter1.png in Resources */,
+				5D0C1F9F2076417200A9D687 /* twitter-white.png in Resources */,
 				C36387E51BA57F98001C733D /* voteminus@2x.png in Resources */,
 				5DD1CEF71F8205E40067F66C /* adShopLogo1.png in Resources */,
 				C3AE820F1B78AEC00058E217 /* VKVideoPlayer_rewind.png in Resources */,
@@ -2002,6 +2077,7 @@
 				EC36CD001E235C6F00B8D2DE /* insta3.jpg in Resources */,
 				C384A3251B82313C00E530C0 /* tour.png in Resources */,
 				C3E427961B89DA54005C2EA2 /* store.png in Resources */,
+				5DD33E8D20739635001118EA /* menu-twitter.png in Resources */,
 				5DD992CB1F71397C00486CAF /* phone@3x.png in Resources */,
 				C372690A1B8378E7004E59D8 /* t-shirt-24 (1).png in Resources */,
 				C3AE82011B78AEC00058E217 /* VKVideoPlayer_close.png in Resources */,
@@ -2030,6 +2106,7 @@
 				EC36CD021E235C6F00B8D2DE /* insta1.jpg in Resources */,
 				C380722D1B8901510014E631 /* button.png in Resources */,
 				5DB182F21F86611D0075BB2D /* backspace.png in Resources */,
+				5DD33E8C20739635001118EA /* menu-reg.png in Resources */,
 				C38065361B7664B100328169 /* Contents.json in Resources */,
 				C36387E31BA57F98001C733D /* replies@3x.png in Resources */,
 				5DD992CD1F71397C00486CAF /* phone.png in Resources */,
@@ -2212,18 +2289,22 @@
 				C3AE81E31B78AB5C0058E217 /* VKVideoPlayerExternalMonitor.m in Sources */,
 				C37673621BB03A52001BAE7B /* VideoTableViewCell.m in Sources */,
 				C3AE81E21B78AB5C0058E217 /* VKVideoPlayerCaptionSRT.m in Sources */,
+				5DD33E9120739AAF001118EA /* MenuButton.m in Sources */,
 				C3E427A91B89E8C7005C2EA2 /* headerTourTableViewCell.m in Sources */,
 				C3AE81E01B78AB5C0058E217 /* VKVideoPlayerAirPlay.m in Sources */,
 				C32170971BA982F8008EA49B /* UIImage+RoundedCorner.m in Sources */,
 				C3E826481B99C5F9006981A3 /* ikTableCellTableViewCell.m in Sources */,
 				C3E427831B89BE0E005C2EA2 /* MapTableTableViewController.m in Sources */,
 				C3B2AF081B7397730071882C /* DCPathItemButton.m in Sources */,
+				5D50879D207881EF00ADA168 /* StoreViewController.m in Sources */,
 				5D782ADA1FA868B5003C4D31 /* SurveySideViewController.m in Sources */,
 				ECED94061E367B5400DEB1EC /* StatsViewController.m in Sources */,
 				C3B2AEF51B7392490071882C /* Common.m in Sources */,
 				C321708F1BA9821F008EA49B /* UIImage+Alpha.m in Sources */,
 				C3B2AEE21B7384610071882C /* UIViewController+AddChild.m in Sources */,
+				5D0C1F9C20763D1300A9D687 /* AdTopBar.m in Sources */,
 				C3B2AEAD1B736E8A0071882C /* AppDelegate.m in Sources */,
+				5D5087A0207886E500ADA168 /* StoreTableViewCell.m in Sources */,
 				5D2221C81F947EF100B1713E /* Extensions.m in Sources */,
 				5D572B231FA3162300A9DE68 /* UIImage+animatedGIF.m in Sources */,
 				5D2942B81F7BA139006C9CD9 /* VideoSideViewController.m in Sources */,
@@ -2243,6 +2324,7 @@
 				EC055D3A1E43D13500867934 /* minusViewController.m in Sources */,
 				EC8EED0E1E56E9F80055FEB8 /* OnboardingViewController.m in Sources */,
 				C3180BC61BAB0F6200BBCBB1 /* adTableViewCell.m in Sources */,
+				5D5087962076527D00ADA168 /* RegistrationViewController.m in Sources */,
 				EC8550A31E7BEC8000FFC5FE /* MerchSuccessViewController.m in Sources */,
 				EC055D431E43D15300867934 /* confirmViewController.m in Sources */,
 				EC69F4B11E72AB8E00780DA0 /* MerchProductsViewController.m in Sources */,

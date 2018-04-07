@@ -35,6 +35,10 @@
 #import "AnimationView.h"
 #import "Extensions.h"
 #import "UIImage+animatedGIF.h"
+#import "MenuButton.h"
+#import "AdTopBar.h"
+#import "RegistrationViewController.h"
+#import "StoreViewController.h"
 
 #define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))
 
@@ -85,6 +89,8 @@
 
 @property (nonatomic) BOOL isShowSwx;
 @property (nonatomic) BOOL isSuccessW;
+
+@property (nonatomic, strong) MenuButton *menu;
 
 @property (nonatomic, assign) NSInteger adType; // 0 - buy a burger, 1 - see movie trailer, 2 - shop, 3 - survey
 @property (nonatomic, strong) AdSideViewController *adSideViewController;
@@ -149,7 +155,34 @@ float bearing = 0.0;
     _chat.player = _player;
     _twitter.player = _player;
    
-   
+
+  // menu
+
+  self.menu = [[MenuButton alloc] initWithParentView:self.view];
+  [self.view addSubview:self.menu];
+
+  UIButton *twitterMenu = [[UIButton alloc] init];
+  [self.menu addMenuButton:twitterMenu];
+  twitterMenu.backgroundColor = [UIColor whiteColor];
+  [twitterMenu addTarget:self action:@selector(twitterAction) forControlEvents:UIControlEventTouchUpInside];
+  [twitterMenu setImage:[UIImage imageNamed:@"menu-twitter.png"] forState:UIControlStateNormal];
+
+  UIButton *chatMenu = [[UIButton alloc] init];
+  [self.menu addMenuButton:chatMenu];
+  [chatMenu addTarget:self action:@selector(chatAction) forControlEvents:UIControlEventTouchUpInside];
+  [chatMenu setImage:[UIImage imageNamed:@"menu-chat.png"] forState:UIControlStateNormal];
+
+  UIButton *regMenu = [[UIButton alloc] init];
+  [self.menu addMenuButton:regMenu];
+  [regMenu addTarget:self action:@selector(registrationAction) forControlEvents:UIControlEventTouchUpInside];
+  [regMenu setImage:[UIImage imageNamed:@"menu-reg.png"] forState:UIControlStateNormal];
+
+  UIButton *shopMenu = [[UIButton alloc] init];
+  [self.menu addMenuButton:shopMenu];
+  [shopMenu addTarget:self action:@selector(shopAction) forControlEvents:UIControlEventTouchUpInside];
+  [shopMenu setImage:[UIImage imageNamed:@"menu-cart.png"] forState:UIControlStateNormal];
+
+ 
     //Add buttons to crowdsurfing
     UIImage *imageAlpha = [[UIImage imageNamed:@"Whhite_swirl"] imageWithAlpha];
     
@@ -464,20 +497,32 @@ float bearing = 0.0;
     
     
     if (self.twitterView==NULL) {
-        self.twitterView = [[UITwitterView alloc] initWithFrame: CGRectMake(0, 5, ((self.view.bounds.size.width*45)/100), self.view.bounds.size.height)];
+      CGFloat w = self.view.bounds.size.width * 0.45;
+      CGFloat h = 30;
+
+      AdTopBar *top = [[NSBundle mainBundle] loadNibNamed:@"AdTopBar" owner:self options:nil][0];
+      top.leftImage.image = [UIImage imageNamed:@"twitter-white.png"];
+      top.rightImage.image = [UIImage imageNamed:@"honeywell.png"];
+      top.frame = CGRectMake(0, 0, w, h);
+
+        self.twitterView = [[UITwitterView alloc] initWithFrame: CGRectMake(0, 0, w, self.view.bounds.size.height)];
     
         self.twitterView.hidden = YES;
     
-        _twitterViewController = [[UIView alloc] initWithFrame: CGRectMake(0, 40, ((self.view.bounds.size.width*45)/100), self.view.bounds.size.height-50)];
+        _twitterViewController = [[UIView alloc] initWithFrame: CGRectMake(0, h, w, self.view.bounds.size.height - h)];
     
         _twitter = [[TwitterViewController alloc] init];
     
         [self addChildController:_twitter toView:_twitterViewController];
     
+      [self.twitterView  addSubview:top];
         [self.twitterView  addSubview:_twitterViewController];
     } else {
-        self.twitterView.frame =  CGRectMake(0, 5, ((self.view.bounds.size.width*45)/100), self.view.bounds.size.height);
-        _twitterViewController.frame = CGRectMake(0, 40, ((self.view.bounds.size.width*45)/100), self.view.bounds.size.height-50);
+      CGFloat w = self.view.bounds.size.width * 0.45;
+      CGFloat h = 30;
+
+      self.twitterView.frame =  CGRectMake(0, 5, w, self.view.bounds.size.height);
+      _twitterViewController.frame = CGRectMake(0, h, w, self.view.bounds.size.height);
         
         for (UIView *view in self.twitterView.subviews) {
             if (view.tag==12) {
@@ -610,9 +655,8 @@ float bearing = 0.0;
     
        _merchViewController = [[UIView alloc] initWithFrame: CGRectMake(0, 40, ((self.view.bounds.size.width*45)/100), self.view.bounds.size.height)];
     
-        
-        
-    
+      _merch = [self.storyboard instantiateViewControllerWithIdentifier:@"betNavigationController"];
+
         [self addChildController:_merch toView:_merchViewController];
     
         [self.merchView  addSubview:_merchViewController];
@@ -795,11 +839,19 @@ float bearing = 0.0;
     }
     
     
-    self.chatView= [[UIView alloc] initWithFrame: CGRectMake(0, 0, ((self.view.bounds.size.width*45)/100), self.view.bounds.size.height)];
+  CGFloat w = self.view.bounds.size.width * 0.45;
+  CGFloat h = 30;
+
+  AdTopBar *top = [[NSBundle mainBundle] loadNibNamed:@"AdTopBar" owner:self options:nil][0];
+  top.leftImage.image = [UIImage imageNamed:@"menu-chat.png"];
+  top.rightImage.image = [UIImage imageNamed:@"honeywell.png"];
+  top.frame = CGRectMake(0, 0, w, h);
+
+  self.chatView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, w, self.view.bounds.size.height)];
     
       
     
-    UIView *chatViewController = [[UIView alloc] initWithFrame: CGRectMake(0, 40, ((self.view.bounds.size.width*45)/100), self.view.bounds.size.height-40)];
+    UIView *chatViewController = [[UIView alloc] initWithFrame: CGRectMake(0, h, w, self.view.bounds.size.height - h)];
     
     UIStoryboard *chat;
         
@@ -810,6 +862,7 @@ float bearing = 0.0;
     _chat = [chat instantiateViewControllerWithIdentifier:@"chatRoomViewController"];
     [self addChildController:_chat toView: chatViewController];
     
+  [self.chatView addSubview:top];
     [self.chatView  addSubview: chatViewController];
       
         
@@ -921,8 +974,8 @@ float bearing = 0.0;
     [self.wheel setSelectedIndex:7];
     [_mainBtn.bottomView addSubview:wheel];
 
-    [self.view addSubview:_mainBtn];
-    
+//    [self.view addSubview:_mainBtn];
+
     [self.wheel setHidden:YES];
     
     
@@ -983,11 +1036,19 @@ float bearing = 0.0;
     
     
     if (self.twitterView==NULL) {
-        self.twitterView = [[UITwitterView alloc] initWithFrame: CGRectMake(0, self.player.view.frame.size.height, self.view.bounds.size.width, self.view.bounds.size.height-self.player.view.frame.size.height)];
+      CGFloat w = self.view.bounds.size.width * 0.45;
+      CGFloat h = 30;
+
+      AdTopBar *top = [[NSBundle mainBundle] loadNibNamed:@"AdTopBar" owner:self options:nil][0];
+      top.leftImage.image = [UIImage imageNamed:@"twitter-white.png"];
+      top.rightImage.image = [UIImage imageNamed:@"honeywell.png"];
+      top.frame = CGRectMake(0, 0, w, h);
+
+      self.twitterView = [[UITwitterView alloc] initWithFrame: CGRectMake(0, self.player.view.frame.size.height, self.view.bounds.size.width, self.view.bounds.size.height-self.player.view.frame.size.height)];
     
         self.twitterView.hidden = YES;
         
-        _twitterViewController = [[UIView alloc] initWithFrame: CGRectMake(0, 50, self.view.bounds.size.width, self.view.bounds.size.height-self.player.view.frame.size.height-90)];
+        _twitterViewController = [[UIView alloc] initWithFrame: CGRectMake(0, h, self.view.bounds.size.width, self.view.bounds.size.height-self.player.view.frame.size.height-h)];
         
         _twitter = [[TwitterViewController alloc] init];
         
@@ -1619,8 +1680,8 @@ float bearing = 0.0;
     
     [self.wheel setSelectedIndex:7];
     [_mainBtn.bottomView addSubview:wheel];
-    [self.view addSubview:_mainBtn];
-    
+//    [self.view addSubview:_mainBtn];
+
     [self.wheel setHidden:YES];
     
     
@@ -1784,7 +1845,9 @@ float bearing = 0.0;
         [self.merchTableView expandIntoView:NULL finished:NULL];
         [self.mapView expandIntoView:NULL finished:NULL];
         [self.ticketView expandIntoView:NULL finished:NULL];
-        
+      [self.regView expandIntoView:NULL finished:NULL];
+      [self.storeView expandIntoView:NULL finished:NULL];
+
         
         if (_isPortrate!=YES) {
             
@@ -1827,6 +1890,8 @@ float bearing = 0.0;
         [self.tourView expandIntoView:NULL finished:NULL];
         [self.merchView expandIntoView:NULL finished:NULL];
         [self.ticketView expandIntoView:NULL finished:NULL];
+      [self.regView expandIntoView:NULL finished:NULL];
+      [self.storeView expandIntoView:NULL finished:NULL];
         [self.mapView expandIntoView:NULL finished:NULL];
         self.viewAds.hidden = YES;
         self.viewAds.hidden = YES;
@@ -1867,6 +1932,8 @@ float bearing = 0.0;
     [self.merchView expandIntoView:NULL finished:NULL];
     [self.mapView expandIntoView:NULL finished:NULL];
     [self.ticketView expandIntoView:NULL finished:NULL];
+  [self.regView expandIntoView:NULL finished:NULL];
+  [self.storeView expandIntoView:NULL finished:NULL];
     if (_isPortrate!=YES) {
         self.viewAds.hidden = YES;
         self.twitterView.hidden = YES;
@@ -1902,7 +1969,7 @@ float bearing = 0.0;
 }
 
 - (void)playVideo {
-    NSString *videoIdentifier = @"RIZdjT1472Y"; // A 11 characters YouTube video identifier
+    NSString *videoIdentifier = @"idmTgHmbDjE"; // A 11 characters YouTube video identifier
     [[XCDYouTubeClient defaultClient] getVideoWithIdentifier:videoIdentifier completionHandler:^(XCDYouTubeVideo *video, NSError *error) {
         
         
@@ -2568,6 +2635,77 @@ float bearing = 0.0;
     }
 }
 
+#pragma mark - Actions
+
+- (void)twitterAction
+{
+  [self.menu collapse];
+  self.twitterView.hidden = NO;
+  [self.twitterView expandIntoView:self.view finished:NULL];
+}
+
+- (void)chatAction
+{
+  [self.menu collapse];
+  self.chatView.hidden = NO;
+  [self.chatView expandIntoView:self.view finished:NULL];
+}
+
+- (void)registrationAction
+{
+  if (self.regView == nil) {
+    CGFloat w = self.view.bounds.size.width * 0.45;
+    CGFloat h = 30;
+
+    AdTopBar *top = [[NSBundle mainBundle] loadNibNamed:@"AdTopBar" owner:self options:nil][0];
+    top.leftImage.image = [UIImage imageNamed:@"menu-chat.png"];
+    top.rightImage.image = [UIImage imageNamed:@"honeywell.png"];
+    top.frame = CGRectMake(0, 0, w, h);
+
+    self.regView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, w, self.view.bounds.size.height)];
+    self.regView.hidden = YES;
+
+    UIView *regViewContainer = [[UIView alloc] initWithFrame: CGRectMake(0, h, w, self.view.bounds.size.height - h)];
+
+    RegistrationViewController *regVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RegistrationViewController"];
+    regVC.containerView = self.regView;
+    [self addChildController:regVC toView: regViewContainer];
+
+    [self.regView addSubview:top];
+    [self.regView  addSubview: regViewContainer];
+  }
+  [self.menu collapse];
+  self.regView.hidden = NO;
+  [self.regView expandIntoView:self.view finished:NULL];
+}
+
+- (void)shopAction
+{
+  if (self.storeView == nil) {
+    CGFloat w = self.view.bounds.size.width * 0.45;
+    CGFloat h = 30;
+
+    AdTopBar *top = [[NSBundle mainBundle] loadNibNamed:@"AdTopBar" owner:self options:nil][0];
+    top.leftImage.image = [UIImage imageNamed:@"menu-cart.png"];
+    top.rightImage.image = [UIImage imageNamed:@"honeywell.png"];
+    top.frame = CGRectMake(0, 0, w, h);
+
+    self.storeView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, w, self.view.bounds.size.height)];
+    self.storeView.hidden = YES;
+
+    UIView *storeViewContainer = [[UIView alloc] initWithFrame: CGRectMake(0, h, w, self.view.bounds.size.height - h)];
+
+    StoreViewController *storeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"StoreViewController"];
+    storeVC.containerView = self.storeView;
+    [self addChildController:storeVC toView: storeViewContainer];
+
+    [self.storeView addSubview:top];
+    [self.storeView addSubview:storeViewContainer];
+  }
+  [self.menu collapse];
+  self.storeView.hidden = NO;
+  [self.storeView expandIntoView:self.view finished:NULL];
+}
 
 #pragma mark - Ad
 
@@ -2613,7 +2751,7 @@ CGFloat _adWidth;
 {
 	[_adTimer invalidate];
 	_adTimer = nil;
-	[self.view addSubview:self.mainBtn];
+//  [self.view addSubview:self.mainBtn];
 }
 
 
@@ -2630,7 +2768,8 @@ CGFloat _adWidth;
 		return;
 	}
 	
-	CGRect buttonFrame = self.mainBtn.frame;
+//	CGRect buttonFrame = self.mainBtn.frame;
+  CGRect buttonFrame = self.menu.buttonFrame;
 	if (_adShown) {
 		switch (self.adType) {
 			case 0: {
@@ -2669,51 +2808,40 @@ CGFloat _adWidth;
 				break;
 		}
 	} else {
-		self.adType = (self.adType + 1) % 4;
+		self.adType = (self.adType + 1) % 1;
 
 //		self.adType = 3;
 		
 		switch (self.adType) {
 			case 0: {
-				UIImageView *adImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:adImage]];
-				adImageView.contentMode = UIViewContentModeScaleAspectFit;
-				CGFloat logoLeftMargin = buttonFrame.size.height / 2;
-				CGFloat k = (buttonFrame.size.height - 2 * adMargin) / adImageView.frame.size.height;
-				adImageView.frame = CGRectMake(logoLeftMargin, adMargin, adImageView.frame.size.width * k, adImageView.frame.size.height * k);
-				UILabel *adLabel = [[UILabel alloc] init];
-				adLabel.attributedText = adText;
+        UILabel *adLabel = [[UILabel alloc] init];
+				adLabel.text = @"Click to checkout our 2018 Connected Solutions!";
+        adLabel.textColor = [UIColor whiteColor];
+        adLabel.font = [UIFont boldSystemFontOfSize:9];
 				adLabel.numberOfLines = 1;
 				[adLabel sizeToFit];
 				CGRect frame = adLabel.frame;
 				frame.size.height = buttonFrame.size.height;
-				frame.origin.x = adImageView.frame.origin.x + adImageView.frame.size.width + adMargin;
+				frame.origin.x = buttonFrame.size.width / 2;
 				adLabel.frame = frame;
-				_adWidth = adImageView.frame.origin.x + adImageView.frame.size.width + 2 * adMargin + adLabel.frame.size.width + buttonFrame.size.height / 2;
-				_adView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, _adWidth, buttonFrame.size.height)];
+
+        _adWidth = adLabel.frame.size.width + buttonFrame.size.width * 1.5;
+        _adView = [[UIImageView alloc] initWithFrame:CGRectMake(self.menu.frame.origin.x + self.menu.buttonFrame.size.width / 2, self.menu.buttonFrame.origin.y, 0, buttonFrame.size.height)];
 				_adView.clipsToBounds = YES;
-				UIGraphicsBeginImageContextWithOptions(_adView.frame.size, NO, 0);
-				UIBezierPath *fillPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, _adWidth, buttonFrame.size.height) byRoundingCorners:(UIRectCornerBottomLeft | UIRectCornerTopLeft) cornerRadii:CGSizeMake(buttonFrame.size.height / 2, buttonFrame.size.height / 2)];
-				CGContextRef context = UIGraphicsGetCurrentContext();
-				CGContextSetFillColorWithColor(context, adBackgroundColor.CGColor);
-				[fillPath fill];
-				UIBezierPath *strokePath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(adBorderWidth / 2, adBorderWidth / 2, _adWidth, buttonFrame.size.height - adBorderWidth) byRoundingCorners:(UIRectCornerBottomLeft | UIRectCornerTopLeft) cornerRadii:CGSizeMake(buttonFrame.size.height / 2 - adBorderWidth / 2, buttonFrame.size.height / 2 - adBorderWidth / 2)];
-				CGContextSetStrokeColorWithColor(context, adBorderColor.CGColor);
-				strokePath.lineWidth = adBorderWidth;
-				[strokePath stroke];
-				UIImage *backgroundImage = UIGraphicsGetImageFromCurrentImageContext();
-				UIGraphicsEndImageContext();
-				_adView.image = backgroundImage;
-				_adView.contentMode = UIViewContentModeLeft;
-				_adView.userInteractionEnabled = YES;
-				UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showAdAction)];
-				[_adView addGestureRecognizer:gestureRecognizer];
-				[_adView addSubview:adImageView];
-				[_adView addSubview:adLabel];
-				_adView.frame = CGRectMake(buttonFrame.origin.x + buttonFrame.size.height / 2, buttonFrame.origin.y, 0, _adView.frame.size.height);
-				[self.view insertSubview:_adView belowSubview:self.mainBtn];
+        _adView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.1];
+        [_adView addSubview:adLabel];
+
+        UIView *leftBorder = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, buttonFrame.size.height)];
+        leftBorder.backgroundColor = [UIColor redColor];
+        [_adView addSubview:leftBorder];
+
+				[self.view insertSubview:_adView belowSubview:self.menu];
 				[self stopAd];
 				[UIView animateWithDuration:adAnimationDuration delay:0 options:0 animations:^{
-					_adView.frame = CGRectMake(buttonFrame.origin.x + buttonFrame.size.height / 2 - _adWidth, buttonFrame.origin.y, _adWidth, buttonFrame.size.height);
+          CGRect frame = _adView.frame;
+          frame.origin.x -= _adWidth;
+          frame.size.width = _adWidth;
+          _adView.frame = frame;
 				} completion:^(BOOL finished){
 					[self stopAd];
 					_adTimer = [NSTimer scheduledTimerWithTimeInterval:adShowDuration target:self selector:@selector(showHideAd) userInfo:nil repeats:NO];
@@ -2907,7 +3035,7 @@ CGFloat _adWidth;
 	if (_adShown) {
 		[_adView removeFromSuperview];
 		_adShown = NO;
-		[self.view addSubview:self.mainBtn];
+//    [self.view addSubview:self.mainBtn];
 	}
 	if (self.adSideViewController != nil || self.videoSideViewController != nil || self.surveySideViewController != nil) {
 		if (self.videoSideViewController != nil) {

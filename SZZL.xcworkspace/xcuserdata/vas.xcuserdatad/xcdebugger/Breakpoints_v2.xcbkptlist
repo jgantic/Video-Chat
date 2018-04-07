@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LiveOne/MainViewController.m"
-            timestampString = "541912487.700856"
+            timestampString = "544777939.723583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1129"
-            endingLineNumber = "1129"
+            startingLineNumber = "1184"
+            endingLineNumber = "1184"
             landmarkName = "-ShowPortrait"
             landmarkType = "7">
          </BreakpointContent>
@@ -67,46 +67,62 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LiveOne/VideoSideViewController.m"
-            timestampString = "539937748.711862"
+            filePath = "LiveOne/YoutubeViewController.m"
+            timestampString = "544443329.162668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[VideoSideViewController viewDidLoad]"
-                  moduleName = "SZZL"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vas/Documents/John/SZZL/LiveOne/VideoSideViewController.m"
-                  timestampString = "541912487.791889"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "2448">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__38-[VideoSideViewController viewDidLoad]_block_invoke"
-                  moduleName = "SZZL"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vas/Documents/John/SZZL/LiveOne/VideoSideViewController.m"
-                  timestampString = "541912487.793812"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "78">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveOne/MainViewController.m"
+            timestampString = "544777939.723718"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "850"
+            endingLineNumber = "850"
+            landmarkName = "-ShowLandscape"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveOne/MainViewController.m"
+            timestampString = "544777939.723772"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2642"
+            endingLineNumber = "2642"
+            landmarkName = "-twitterAction"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveOne/MainViewController.m"
+            timestampString = "544777939.723819"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2677"
+            endingLineNumber = "2677"
+            landmarkName = "-registrationAction"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -115,13 +131,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LiveOne/VideoSideViewController.m"
-            timestampString = "539937748.71224"
+            filePath = "LiveOne/MainViewController.m"
+            timestampString = "544777939.723864"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "1893"
+            endingLineNumber = "1893"
+            landmarkName = "-showMenuHideGesture:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -131,13 +147,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LiveOne/VideoSideViewController.m"
-            timestampString = "539937748.712467"
+            filePath = "LiveOne/MainViewController.m"
+            timestampString = "544777939.7239079"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "1935"
+            endingLineNumber = "1935"
+            landmarkName = "-showMenuHide:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
