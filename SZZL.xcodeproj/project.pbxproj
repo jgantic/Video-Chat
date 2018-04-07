@@ -10,7 +10,6 @@
 		5D0C1F9920763B1200A9D687 /* menu-start.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0C1F9820763B1100A9D687 /* menu-start.png */; };
 		5D0C1F9C20763D1300A9D687 /* AdTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C1F9B20763D1300A9D687 /* AdTopBar.m */; };
 		5D0C1F9F2076417200A9D687 /* twitter-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0C1F9E2076417200A9D687 /* twitter-white.png */; };
-		5D0C1FA0207644AB00A9D687 /* AdTopBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D0C1F9D20763D3B00A9D687 /* AdTopBar.xib */; };
 		5D0C1FA620764A1A00A9D687 /* honeywell.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0C1FA520764A1A00A9D687 /* honeywell.png */; };
 		5D2221C51F9474E600B1713E /* Ad in Resources */ = {isa = PBXBuildFile; fileRef = 5D2221C41F9474E600B1713E /* Ad */; };
 		5D2221C81F947EF100B1713E /* Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2221C71F947EF100B1713E /* Extensions.m */; };
@@ -46,6 +45,7 @@
 		5DE375451FA8820300FD7B8D /* survey_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DE375421FA881FD00FD7B8D /* survey_header.png */; };
 		5DE375461FA8820300FD7B8D /* survey_team2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DE375431FA881FF00FD7B8D /* survey_team2.png */; };
 		5DE375471FA8820300FD7B8D /* survey_team1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DE375441FA8820100FD7B8D /* survey_team1.png */; };
+		650C0DB820796B2300C99B43 /* AdTopBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 650C0DB720796B2200C99B43 /* AdTopBar.xib */; };
 		9382EA21BFBD6ED06A0996B8 /* libPods-SZZL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A7598A77E7B4784FB79C18 /* libPods-SZZL.a */; };
 		C300CB2A1BC7D9FE0081C9BB /* crown3.png in Resources */ = {isa = PBXBuildFile; fileRef = C300CB271BC7D9FE0081C9BB /* crown3.png */; };
 		C300CB2B1BC7D9FE0081C9BB /* crown2.png in Resources */ = {isa = PBXBuildFile; fileRef = C300CB281BC7D9FE0081C9BB /* crown2.png */; };
@@ -350,7 +350,6 @@
 		5D0C1F9820763B1100A9D687 /* menu-start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-start.png"; sourceTree = "<group>"; };
 		5D0C1F9A20763D1300A9D687 /* AdTopBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdTopBar.h; sourceTree = "<group>"; };
 		5D0C1F9B20763D1300A9D687 /* AdTopBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdTopBar.m; sourceTree = "<group>"; };
-		5D0C1F9D20763D3B00A9D687 /* AdTopBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AdTopBar.xib; path = /Users/vas/Documents/John/SZZL/LiveOne/AdTopBar.xib; sourceTree = "<absolute>"; };
 		5D0C1F9E2076417200A9D687 /* twitter-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-white.png"; sourceTree = "<group>"; };
 		5D0C1FA520764A1A00A9D687 /* honeywell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = honeywell.png; sourceTree = "<group>"; };
 		5D2221C41F9474E600B1713E /* Ad */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Ad; sourceTree = "<group>"; };
@@ -397,6 +396,7 @@
 		5DE375421FA881FD00FD7B8D /* survey_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = survey_header.png; sourceTree = "<group>"; };
 		5DE375431FA881FF00FD7B8D /* survey_team2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = survey_team2.png; sourceTree = "<group>"; };
 		5DE375441FA8820100FD7B8D /* survey_team1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = survey_team1.png; sourceTree = "<group>"; };
+		650C0DB720796B2200C99B43 /* AdTopBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdTopBar.xib; sourceTree = "<group>"; };
 		B9A7598A77E7B4784FB79C18 /* libPods-SZZL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SZZL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C300CB271BC7D9FE0081C9BB /* crown3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crown3.png; sourceTree = "<group>"; };
 		C300CB281BC7D9FE0081C9BB /* crown2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crown2.png; sourceTree = "<group>"; };
@@ -868,7 +868,7 @@
 				5D782AD91FA868B5003C4D31 /* SurveySideViewController.m */,
 				5D0C1F9A20763D1300A9D687 /* AdTopBar.h */,
 				5D0C1F9B20763D1300A9D687 /* AdTopBar.m */,
-				5D0C1F9D20763D3B00A9D687 /* AdTopBar.xib */,
+				650C0DB720796B2200C99B43 /* AdTopBar.xib */,
 				5D5087942076527D00ADA168 /* RegistrationViewController.h */,
 				5D5087952076527D00ADA168 /* RegistrationViewController.m */,
 				5D50879B207881EF00ADA168 /* StoreViewController.h */,
@@ -1984,7 +1984,6 @@
 				C34A91E61BA83A0000724F1A /* chatCell.xib in Resources */,
 				C3A795101B99ED5E0083BD72 /* crown.png in Resources */,
 				C38EC6351B8B7FC500771B2E /* marker-stroked-24@2x.png in Resources */,
-				5D0C1FA0207644AB00A9D687 /* AdTopBar.xib in Resources */,
 				C380653E1B7664B100328169 /* Icon-Small.png in Resources */,
 				C3227B2C1BAED0A30073BAC1 /* fill-messages@3x.png in Resources */,
 				C31E0A501D048B4900CE9690 /* oval@3x.png in Resources */,
@@ -2076,6 +2075,7 @@
 				ECA0ED8C1E66E153007CC35D /* APPChildViewController.xib in Resources */,
 				EC36CD001E235C6F00B8D2DE /* insta3.jpg in Resources */,
 				C384A3251B82313C00E530C0 /* tour.png in Resources */,
+				650C0DB820796B2300C99B43 /* AdTopBar.xib in Resources */,
 				C3E427961B89DA54005C2EA2 /* store.png in Resources */,
 				5DD33E8D20739635001118EA /* menu-twitter.png in Resources */,
 				5DD992CB1F71397C00486CAF /* phone@3x.png in Resources */,
