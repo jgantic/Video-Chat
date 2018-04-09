@@ -2626,6 +2626,7 @@ float bearing = 0.0;
 - (void)twitterAction
 {
   [self.menu collapse];
+  self.overlay.hidden = NO;
   self.twitterView.hidden = NO;
   [self.twitterView expandIntoView:self.view finished:NULL];
 }
@@ -2633,6 +2634,7 @@ float bearing = 0.0;
 - (void)chatAction
 {
   [self.menu collapse];
+  self.overlay.hidden = NO;
   self.chatView.hidden = NO;
   [self.chatView expandIntoView:self.view finished:NULL];
 }
@@ -2661,6 +2663,7 @@ float bearing = 0.0;
     [self.regView  addSubview: regViewContainer];
   }
   [self.menu collapse];
+  self.overlay.hidden = NO;
   self.regView.hidden = NO;
   [self.regView expandIntoView:self.view finished:NULL];
 }
@@ -2689,6 +2692,7 @@ float bearing = 0.0;
     [self.storeView addSubview:storeViewContainer];
   }
   [self.menu collapse];
+  self.overlay.hidden = NO;
   self.storeView.hidden = NO;
   [self.storeView expandIntoView:self.view finished:NULL];
 }

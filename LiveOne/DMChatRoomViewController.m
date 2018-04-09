@@ -163,7 +163,7 @@ BOOL isShouldReturn = NO;
 
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         userName = [defaults stringForKey:@"chatName"];
-        if ([userName isEqualToString:@"Chat Name"]) {
+        if ([userName isEqualToString:@"Chat Name"] && !isShowingAlertView) {
             [self presentChatNameDialog];
         }
         chatData  = [[NSMutableArray alloc] init];
