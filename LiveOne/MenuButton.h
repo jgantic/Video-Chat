@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MenuButtonProtocol
+
+- (void)menuButtonTapped;
+
+@end
+
 @interface MenuButton : UIView {
   UIButton *menuButton;
   NSMutableArray* buttons;
@@ -15,6 +21,7 @@
 }
 
 @property (readonly) CGRect buttonFrame;
+@property (weak) id<MenuButtonProtocol> menuDelegate;
 
 - (id)initWithParentView:(UIView*)parentView;
 - (void)addMenuButton:(UIButton*)button;

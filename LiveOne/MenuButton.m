@@ -10,8 +10,8 @@
 
 @implementation MenuButton
 
-CGFloat size = 30;
-CGFloat radius = 8;
+CGFloat size = 45;
+CGFloat radius = 11;
 CGFloat distance = 15;
 CGFloat gap = 6;
 CGFloat imageInset = 6;
@@ -96,6 +96,7 @@ UIColor *normalColor;
     }];
   }
   expanded = !expanded;
+  [self.menuDelegate menuButtonTapped];
 }
 
 - (void)collapse
@@ -110,6 +111,7 @@ UIColor *normalColor;
     }];
   }
   expanded = NO;
+  [self.menuDelegate menuButtonTapped];
 }
 
 @end

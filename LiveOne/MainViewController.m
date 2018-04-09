@@ -159,6 +159,7 @@ float bearing = 0.0;
   // menu
 
   self.menu = [[MenuButton alloc] initWithParentView:self.view];
+  self.menu.menuDelegate = self;
   [self.view addSubview:self.menu];
 
   UIButton *twitterMenu = [[UIButton alloc] init];
@@ -837,45 +838,34 @@ float bearing = 0.0;
     } else {
         chatHidden = YES;
     }
-    
-    
-  CGFloat w = self.view.bounds.size.width * 0.45;
-  CGFloat h = 30;
 
-  AdTopBar *top = [[NSBundle mainBundle] loadNibNamed:@"AdTopBar" owner:self options:nil][0];
-  top.leftImage.image = [UIImage imageNamed:@"menu-chat.png"];
-  top.rightImage.image = [UIImage imageNamed:@"honeywell.png"];
-  top.frame = CGRectMake(0, 0, w, h);
+  if (self.chat == nil) {
+    CGFloat w = self.view.bounds.size.width * 0.45;
+    CGFloat h = 30;
 
-  self.chatView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, w, self.view.bounds.size.height)];
-    
-      
-    
+    AdTopBar *top = [[NSBundle mainBundle] loadNibNamed:@"AdTopBar" owner:self options:nil][0];
+    top.leftImage.image = [UIImage imageNamed:@"menu-chat.png"];
+    top.rightImage.image = [UIImage imageNamed:@"honeywell.png"];
+    top.frame = CGRectMake(0, 0, w, h);
+
+    self.chatView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, w, self.view.bounds.size.height)];
+
     UIView *chatViewController = [[UIView alloc] initWithFrame: CGRectMake(0, h, w, self.view.bounds.size.height - h)];
-    
     UIStoryboard *chat;
-        
-        
     self.chatView.hidden = chatHidden;
-    chat = [UIStoryboard storyboardWithName:@"Chat"
-                                     bundle:nil];
-    _chat = [chat instantiateViewControllerWithIdentifier:@"chatRoomViewController"];
-    [self addChildController:_chat toView: chatViewController];
-    
-  [self.chatView addSubview:top];
-    [self.chatView  addSubview: chatViewController];
-      
-        
+    chat = [UIStoryboard storyboardWithName:@"Chat" bundle:nil];
+    self.chat = [chat instantiateViewControllerWithIdentifier:@"chatRoomViewController"];
+    [self addChildController:self.chat toView: chatViewController];
 
-        
-    if (_bloomYes==NO) {
-        self.chatView.hidden = YES;
+    [self.chatView addSubview:top];
+    [self.chatView  addSubview: chatViewController];
+
+    if (!_bloomYes) {
+      self.chatView.hidden = YES;
     }
-    
-    
-    
-    
-    [self.view addSubview:_chatView];
+
+    [self.view addSubview:self.chatView];
+  }
     //add player to controllers
     _chat.player = _player;
     _twitter.player = _player;
@@ -1510,21 +1500,17 @@ float bearing = 0.0;
         chatHidden = YES;
     }
     
-    
+  if (self.chat == nil) {
     self.chatView= [[UIView alloc] initWithFrame: CGRectMake(0, self.player.view.frame.size.height, self.view.bounds.size.width, self.view.bounds.size.height-self.player.view.frame.size.height)];
     
     self.chatView.hidden = chatHidden;
     
     UIView *chatViewController = [[UIView alloc] initWithFrame: CGRectMake(0, 40, self.view.bounds.size.width, self.view.bounds.size.height-self.player.view.frame.size.height-40)];
     
-    UIStoryboard *chat;
-    
-    chat = [UIStoryboard storyboardWithName:@"Chat"
-                                     bundle:nil];
-    _chat = [chat instantiateViewControllerWithIdentifier:@"chatRoomViewController"];
-    [self addChildController:_chat toView:chatViewController];
-        
-    
+    UIStoryboard *chat = [UIStoryboard storyboardWithName:@"Chat" bundle:nil];
+    self.chat = [chat instantiateViewControllerWithIdentifier:@"chatRoomViewController"];
+    [self addChildController:self.chat toView:chatViewController];
+
     [self.chatView  addSubview:chatViewController];
         
     UIButton *downButton1 = [[UIButton alloc] initWithFrame:CGRectMake([[UIScreen mainScreen] bounds].size.width-42, 8,  25.0, 25.0)];
@@ -1534,10 +1520,10 @@ float bearing = 0.0;
     downButton1.tag=12;
     [self.chatView addSubview:downButton1];
     
-    if (_bloomYes==NO) {
+    if (!_bloomYes) {
         self.chatView.hidden = YES;
     }
-    
+  }
     UIView *overlay = [[UIView alloc] initWithFrame:self.chatView.frame];
     
     overlay.backgroundColor = [UIColor blackColor];
@@ -3178,6 +3164,10 @@ CGFloat _adWidth;
 	[self startAd];
 }
 
+- (void)menuButtonTapped
+{
+  [self showMenuHide:self];
+}
 
 @end
 

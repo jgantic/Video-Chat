@@ -85,6 +85,11 @@
 }
 
 - (void)submitAction {
+  self.firstTextField.text = nil;
+  self.lastTextField.text = nil;
+  self.emailTextField.text = nil;
+  self.companyTextField.text = nil;
+  self.phoneTextField.text = nil;
   [self.containerView expandIntoView:nil finished:nil];
 }
 

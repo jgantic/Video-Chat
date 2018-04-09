@@ -17,8 +17,9 @@
 #import "AdSideViewController.h"
 #import "VideoSideViewController.h"
 #import "SurveySideViewController.h"
+#import "MenuButton.h"
 
-@interface MainViewController : UIViewController <SMWheelControlDelegate, SMWheelControlDataSource, UIGestureRecognizerDelegate, VKVideoPlayerDelegate, DCPathButtonDelegate, AdSideViewControllerDelegate, VideoSideViewControllerDelegate, SurveySideViewControllerDelegate>
+@interface MainViewController : UIViewController <SMWheelControlDelegate, SMWheelControlDataSource, UIGestureRecognizerDelegate, VKVideoPlayerDelegate, DCPathButtonDelegate, AdSideViewControllerDelegate, VideoSideViewControllerDelegate, SurveySideViewControllerDelegate, MenuButtonProtocol>
 
 @property (strong, nonatomic) UITwitterView *twitterView;
 @property (strong, nonatomic) UIInstagramView *instagramView;
