@@ -2461,7 +2461,7 @@ float bearing = 0.0;
                                   self.merchTableView.hidden = YES;
                                   self.ticketView.hidden = YES;
                                    _mainBtn.hidden = NO;
-                                  NSString *shareText = @"NFL ON CBS";
+                                  NSString *shareText = @"Honey";
                                   
                                   NSArray *items = @[shareText];
                                   
