@@ -25,7 +25,7 @@
 
   CGFloat r = 2;
   UIColor *placeholderColor = [UIColor whiteColor];
-  UIFont *placeholderFont = [UIFont systemFontOfSize:8];
+  UIFont *placeholderFont = [UIFont systemFontOfSize:12];
 
   self.firstView.layer.cornerRadius = r;
   NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:self.firstTextField.placeholder attributes:@{NSForegroundColorAttributeName: placeholderColor, NSFontAttributeName: placeholderFont}];

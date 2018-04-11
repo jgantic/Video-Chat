@@ -164,9 +164,8 @@ float bearing = 0.0;
 
   UIButton *twitterMenu = [[UIButton alloc] init];
   [self.menu addMenuButton:twitterMenu];
-  twitterMenu.backgroundColor = [UIColor whiteColor];
   [twitterMenu addTarget:self action:@selector(twitterAction) forControlEvents:UIControlEventTouchUpInside];
-  [twitterMenu setImage:[UIImage imageNamed:@"menu-twitter.png"] forState:UIControlStateNormal];
+  [twitterMenu setImage:[UIImage imageNamed:@"twitter-white.png"] forState:UIControlStateNormal];
 
   UIButton *chatMenu = [[UIButton alloc] init];
   [self.menu addMenuButton:chatMenu];
@@ -2646,7 +2645,7 @@ float bearing = 0.0;
     CGFloat h = 30;
 
     AdTopBar *top = [[NSBundle mainBundle] loadNibNamed:@"AdTopBar" owner:self options:nil][0];
-    top.leftImage.image = [UIImage imageNamed:@"menu-chat.png"];
+    top.leftImage.image = [UIImage imageNamed:@"menu-reg.png"];
     top.rightImage.image = [UIImage imageNamed:@"honeywell.png"];
     top.frame = CGRectMake(0, 0, w, h);
 
@@ -2807,7 +2806,7 @@ CGFloat _adWidth;
         UILabel *adLabel = [[UILabel alloc] init];
 				adLabel.text = @"Click to checkout our 2018 Connected Solutions!";
         adLabel.textColor = [UIColor whiteColor];
-        adLabel.font = [UIFont boldSystemFontOfSize:9];
+        adLabel.font = [UIFont boldSystemFontOfSize:12];
 				adLabel.numberOfLines = 1;
 				[adLabel sizeToFit];
 				CGRect frame = adLabel.frame;

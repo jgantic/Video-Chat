@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LiveOne/MainViewController.m"
-            timestampString = "544957223.7387429"
+            timestampString = "545113806.750219"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1879"
-            endingLineNumber = "1879"
+            startingLineNumber = "1878"
+            endingLineNumber = "1878"
             landmarkName = "-showMenuHideGesture:"
             landmarkType = "7">
          </BreakpointContent>
@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LiveOne/MainViewController.m"
-            timestampString = "544957223.739138"
+            timestampString = "545113806.750591"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1921"
-            endingLineNumber = "1921"
+            startingLineNumber = "1920"
+            endingLineNumber = "1920"
             landmarkName = "-showMenuHide:"
             landmarkType = "7">
          </BreakpointContent>
@@ -116,11 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LiveOne/MainViewController.m"
-            timestampString = "544957223.739489"
+            timestampString = "545113806.750832"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "857"
-            endingLineNumber = "857"
+            startingLineNumber = "856"
+            endingLineNumber = "856"
             landmarkName = "-ShowLandscape"
             landmarkType = "7">
          </BreakpointContent>

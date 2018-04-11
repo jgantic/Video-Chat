@@ -14,7 +14,7 @@ CGFloat size = 45;
 CGFloat radius = 11;
 CGFloat distance = 15;
 CGFloat gap = 6;
-CGFloat imageInset = 6;
+CGFloat imageInset = 12;
 UIColor *normalColor;
 
 - (CGRect)buttonFrame

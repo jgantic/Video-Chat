@@ -33,7 +33,7 @@
             TWTRAPIClient *APIClient = [[Twitter sharedInstance] APIClient];
             
            
-            TWTRUserTimelineDataSource *userTimelineDataSource = [[TWTRUserTimelineDataSource alloc] initWithScreenName:@"NFLonCBS" APIClient:APIClient];
+            TWTRUserTimelineDataSource *userTimelineDataSource = [[TWTRUserTimelineDataSource alloc] initWithScreenName:@"Honeywell" APIClient:APIClient];
             
             self.dataSource = userTimelineDataSource;
             
