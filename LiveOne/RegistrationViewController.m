@@ -91,6 +91,7 @@
   self.companyTextField.text = nil;
   self.phoneTextField.text = nil;
   [self.containerView expandIntoView:nil finished:nil];
+  [self.overlayView expandIntoView:nil finished:nil];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

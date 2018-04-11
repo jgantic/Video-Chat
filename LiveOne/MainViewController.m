@@ -480,12 +480,10 @@ float bearing = 0.0;
     
     
     UIView *overlay = [[UIView alloc] initWithFrame: CGRectMake(0, 0, ((self.view.bounds.size.width*45)/100), self.view.bounds.size.height)];
-    
     overlay.backgroundColor = [UIColor blackColor];
+    overlay.alpha = 0.5;
     
-    overlay.alpha = 0.4f;
-    
-    self.overlay= overlay;
+    self.overlay = overlay;
     
     if (_bloomYes==NO) {
         self.overlay.hidden = YES;
@@ -1527,7 +1525,7 @@ float bearing = 0.0;
     
     overlay.backgroundColor = [UIColor blackColor];
     
-    overlay.alpha = 0.4f;
+    overlay.alpha = 0.5;
     
     self.overlay= overlay;
     [self.view addSubview:self.overlay];
@@ -2656,6 +2654,7 @@ float bearing = 0.0;
 
     RegistrationViewController *regVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RegistrationViewController"];
     regVC.containerView = self.regView;
+    regVC.overlayView = self.overlay;
     [self addChildController:regVC toView: regViewContainer];
 
     [self.regView addSubview:top];
@@ -2685,6 +2684,7 @@ float bearing = 0.0;
 
     StoreViewController *storeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"StoreViewController"];
     storeVC.containerView = self.storeView;
+    storeVC.overlayView = self.overlay;
     [self addChildController:storeVC toView: storeViewContainer];
 
     [self.storeView addSubview:top];

@@ -11,5 +11,6 @@
 @interface StoreViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) UIView *containerView;
+@property (nonatomic, weak) UIView *overlayView;
 
 @end

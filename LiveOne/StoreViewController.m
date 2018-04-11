@@ -61,9 +61,9 @@
   v.numberOfLines = 0;
   v.font = [UIFont systemFontOfSize:16];
   v.textAlignment = NSTextAlignmentCenter;
-  v.textColor = [UIColor colorWithWhite:0.63 alpha:1];
+  v.textColor = [UIColor colorWithWhite:1 alpha:1];
   v.backgroundColor = [UIColor clearColor];
-  v.text = @"Explore Honeywell Connected Solutions";
+  v.text = @"Explore Honeywell\nConnected Solutions";
   return v;
 }
 
@@ -99,6 +99,7 @@
 
 - (void)purchaseAction {
   [self.containerView expandIntoView:nil finished:nil];
+  [self.overlayView expandIntoView:nil finished:nil];
 }
 
 @end

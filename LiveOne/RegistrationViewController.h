@@ -11,5 +11,6 @@
 @interface RegistrationViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, weak) UIView *containerView;
+@property (nonatomic, weak) UIView *overlayView;
 
 @end
