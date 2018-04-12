@@ -99,7 +99,7 @@
 
 - (void)purchaseAction {
   [self.containerView expandIntoView:nil finished:nil];
-  [self.overlayView expandIntoView:nil finished:nil];
+  self.overlayView.hidden = YES;
 }
 
 @end
