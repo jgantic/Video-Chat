@@ -886,6 +886,10 @@ THE SOFTWARE.
 
 
 
+## TwilioVideo
+
+Copyright 2011-2018 Twilio, Inc. All rights reserved. Use of this software is subject to the terms and conditions of the Twilio Terms of Service located at http://www.twilio.com/legal/tos
+
 ## UIColor+Hex
 
 The MIT License (MIT)

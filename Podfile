@@ -1,5 +1,5 @@
 
-platform :ios, '8.0'
+platform :ios, '8.1'
 
 target 'SZZL' do
 project 'SZZL.xcodeproj'
@@ -26,5 +26,6 @@ pod 'JHChainableAnimations'
 pod 'IQKeyboardManager'
 pod 'UIColor+Hex'
 pod 'DAKeyboardControl'
+pod 'TwilioVideo', '~> 1.0'
 end
 install! 'cocoapods', :deterministic_uuids => false

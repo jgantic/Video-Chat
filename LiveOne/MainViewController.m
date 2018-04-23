@@ -37,7 +37,7 @@
 #import "UIImage+animatedGIF.h"
 #import "MenuButton.h"
 #import "AdTopBar.h"
-#import "RegistrationViewController.h"
+#import "VideoCallViewController.h"
 #import "StoreViewController.h"
 
 #define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))
@@ -156,33 +156,6 @@ float bearing = 0.0;
     _twitter.player = _player;
    
 
-  // menu
-
-  self.menu = [[MenuButton alloc] initWithParentView:self.view];
-  self.menu.menuDelegate = self;
-  [self.view addSubview:self.menu];
-
-  UIButton *twitterMenu = [[UIButton alloc] init];
-  [self.menu addMenuButton:twitterMenu];
-  [twitterMenu addTarget:self action:@selector(twitterAction) forControlEvents:UIControlEventTouchUpInside];
-  [twitterMenu setImage:[UIImage imageNamed:@"twitter-white.png"] forState:UIControlStateNormal];
-
-  UIButton *chatMenu = [[UIButton alloc] init];
-  [self.menu addMenuButton:chatMenu];
-  [chatMenu addTarget:self action:@selector(chatAction) forControlEvents:UIControlEventTouchUpInside];
-  [chatMenu setImage:[UIImage imageNamed:@"menu-chat.png"] forState:UIControlStateNormal];
-
-  UIButton *regMenu = [[UIButton alloc] init];
-  [self.menu addMenuButton:regMenu];
-  [regMenu addTarget:self action:@selector(registrationAction) forControlEvents:UIControlEventTouchUpInside];
-  [regMenu setImage:[UIImage imageNamed:@"menu-reg.png"] forState:UIControlStateNormal];
-
-  UIButton *shopMenu = [[UIButton alloc] init];
-  [self.menu addMenuButton:shopMenu];
-  [shopMenu addTarget:self action:@selector(shopAction) forControlEvents:UIControlEventTouchUpInside];
-  [shopMenu setImage:[UIImage imageNamed:@"menu-cart.png"] forState:UIControlStateNormal];
-
- 
     //Add buttons to crowdsurfing
     UIImage *imageAlpha = [[UIImage imageNamed:@"Whhite_swirl"] imageWithAlpha];
     
@@ -334,6 +307,32 @@ float bearing = 0.0;
 
 }
 
+- (void)createMenu {
+  self.menu = [[MenuButton alloc] initWithParentView:self.view];
+  self.menu.menuDelegate = self;
+  [self.view addSubview:self.menu];
+
+  UIButton *twitterMenu = [[UIButton alloc] init];
+  [self.menu addMenuButton:twitterMenu];
+  [twitterMenu addTarget:self action:@selector(twitterAction) forControlEvents:UIControlEventTouchUpInside];
+  [twitterMenu setImage:[UIImage imageNamed:@"twitter-white.png"] forState:UIControlStateNormal];
+
+  UIButton *chatMenu = [[UIButton alloc] init];
+  [self.menu addMenuButton:chatMenu];
+  [chatMenu addTarget:self action:@selector(chatAction) forControlEvents:UIControlEventTouchUpInside];
+  [chatMenu setImage:[UIImage imageNamed:@"menu-chat.png"] forState:UIControlStateNormal];
+
+  UIButton *videoCallMenu = [[UIButton alloc] init];
+  [self.menu addMenuButton:videoCallMenu];
+  [videoCallMenu addTarget:self action:@selector(videoCallAction) forControlEvents:UIControlEventTouchUpInside];
+  [videoCallMenu setImage:[UIImage imageNamed:@"menu-video-call.png"] forState:UIControlStateNormal];
+
+  UIButton *shopMenu = [[UIButton alloc] init];
+  [self.menu addMenuButton:shopMenu];
+  [shopMenu addTarget:self action:@selector(shopAction) forControlEvents:UIControlEventTouchUpInside];
+  [shopMenu setImage:[UIImage imageNamed:@"menu-cart.png"] forState:UIControlStateNormal];
+}
+
 - (void) returnBackground:(id) sender {
     _isSuccessW = NO;
     self.merchView.backgroundColor = [UIColor clearColor];
@@ -415,7 +414,7 @@ float bearing = 0.0;
 
 - (void) ShowLandscape {
 
-
+  [self createMenu];
     
     self.viewAds.hidden = NO;
     self.overlay.frame = self.chatView.frame;
@@ -981,7 +980,7 @@ float bearing = 0.0;
 
 - (void) ShowPortrait {
     
-    
+  [self createMenu];
     
     [IQKeyboardManager sharedManager].enable = NO;
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
@@ -1828,7 +1827,7 @@ float bearing = 0.0;
         [self.merchTableView expandIntoView:NULL finished:NULL];
         [self.mapView expandIntoView:NULL finished:NULL];
         [self.ticketView expandIntoView:NULL finished:NULL];
-      [self.regView expandIntoView:NULL finished:NULL];
+      [self.videoCallView expandIntoView:NULL finished:NULL];
       [self.storeView expandIntoView:NULL finished:NULL];
 
         
@@ -1873,7 +1872,7 @@ float bearing = 0.0;
         [self.tourView expandIntoView:NULL finished:NULL];
         [self.merchView expandIntoView:NULL finished:NULL];
         [self.ticketView expandIntoView:NULL finished:NULL];
-      [self.regView expandIntoView:NULL finished:NULL];
+      [self.videoCallView expandIntoView:NULL finished:NULL];
       [self.storeView expandIntoView:NULL finished:NULL];
         [self.mapView expandIntoView:NULL finished:NULL];
         self.viewAds.hidden = YES;
@@ -1915,7 +1914,7 @@ float bearing = 0.0;
     [self.merchView expandIntoView:NULL finished:NULL];
     [self.mapView expandIntoView:NULL finished:NULL];
     [self.ticketView expandIntoView:NULL finished:NULL];
-  [self.regView expandIntoView:NULL finished:NULL];
+  [self.videoCallView expandIntoView:NULL finished:NULL];
   [self.storeView expandIntoView:NULL finished:NULL];
     if (_isPortrate!=YES) {
         self.viewAds.hidden = YES;
@@ -1952,7 +1951,7 @@ float bearing = 0.0;
 }
 
 - (void)playVideo {
-    NSString *videoIdentifier = @"idmTgHmbDjE"; // A 11 characters YouTube video identifier
+    NSString *videoIdentifier = @"7QcxcGz1kKo"; // A 11 characters YouTube video identifier
     [[XCDYouTubeClient defaultClient] getVideoWithIdentifier:videoIdentifier completionHandler:^(XCDYouTubeVideo *video, NSError *error) {
         
         
@@ -2636,34 +2635,34 @@ float bearing = 0.0;
   [self.chatView expandIntoView:self.view finished:NULL];
 }
 
-- (void)registrationAction
+- (void)videoCallAction
 {
-  if (self.regView == nil) {
+  if (self.videoCallView == nil) {
     CGFloat w = self.view.bounds.size.width * 0.45;
     CGFloat h = 30;
 
     AdTopBar *top = [[NSBundle mainBundle] loadNibNamed:@"AdTopBar" owner:self options:nil][0];
-    top.leftImage.image = [UIImage imageNamed:@"menu-reg.png"];
+    top.leftImage.image = [UIImage imageNamed:@"menu-video-call.png"];
     top.rightImage.image = [UIImage imageNamed:@"honeywell.png"];
     top.frame = CGRectMake(0, 0, w, h);
 
-    self.regView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, w, self.view.bounds.size.height)];
-    self.regView.hidden = YES;
+    self.videoCallView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, w, self.view.bounds.size.height)];
+    self.videoCallView.hidden = YES;
 
-    UIView *regViewContainer = [[UIView alloc] initWithFrame: CGRectMake(0, h, w, self.view.bounds.size.height - h)];
+    UIView *videoCallViewContainer = [[UIView alloc] initWithFrame: CGRectMake(0, h, w, self.view.bounds.size.height - h)];
 
-    RegistrationViewController *regVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RegistrationViewController"];
-    regVC.containerView = self.regView;
-    regVC.overlayView = self.overlay;
-    [self addChildController:regVC toView: regViewContainer];
+    VideoCallViewController *videoCallVC = [self.storyboard instantiateViewControllerWithIdentifier:@"VideoCallViewController"];
+    videoCallVC.containerView = self.videoCallView;
+    videoCallVC.overlayView = self.overlay;
+    [self addChildController:videoCallVC toView: videoCallViewContainer];
 
-    [self.regView addSubview:top];
-    [self.regView  addSubview: regViewContainer];
+    [self.videoCallView addSubview:top];
+    [self.videoCallView  addSubview: videoCallViewContainer];
   }
   [self.menu collapse];
   self.overlay.hidden = NO;
-  self.regView.hidden = NO;
-  [self.regView expandIntoView:self.view finished:NULL];
+  self.videoCallView.hidden = NO;
+  [self.videoCallView expandIntoView:self.view finished:NULL];
 }
 
 - (void)shopAction

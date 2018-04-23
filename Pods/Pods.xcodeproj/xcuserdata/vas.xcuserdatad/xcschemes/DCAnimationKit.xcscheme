@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '493A4B04959F52800369CACD'
+               BlueprintIdentifier = 'A9E33C6AD565ED15BF730552'
                BlueprintName = 'DCAnimationKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libDCAnimationKit.a'>

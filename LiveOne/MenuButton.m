@@ -10,10 +10,12 @@
 
 @implementation MenuButton
 
+CGFloat startSize = 55;
+CGFloat startGap = 6;
 CGFloat size = 45;
-CGFloat radius = 11;
+CGFloat radius = 4;
 CGFloat distance = 15;
-CGFloat gap = 6;
+CGFloat gap = 4;
 CGFloat imageInset = 12;
 UIColor *normalColor;
 
@@ -31,7 +33,7 @@ UIColor *normalColor;
 
   normalColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
 
-  self.frame = CGRectMake(0, 0, size, size);
+  self.frame = CGRectMake(0, 0, startSize, startSize);
   self.backgroundColor = [UIColor clearColor];
   self.clipsToBounds = NO;
   buttons = [NSMutableArray array];
@@ -56,12 +58,13 @@ UIColor *normalColor;
 - (void)addMenuButton:(UIButton *)button
 {
   CGRect frame = self.frame;
-  frame.origin.y -= self.frame.size.width + gap;
-  frame.size.height += self.frame.size.width + gap;
+  CGFloat theGap = buttons.count == 0 ? startGap : gap;
+  frame.origin.y -= size + theGap;
+  frame.size.height += size + theGap;
   self.frame = frame;
 
   [buttons addObject:button];
-  button.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.width);
+  button.frame = CGRectMake((startSize - size) / 2, (startSize - size) / 2, size, size);
   button.backgroundColor = normalColor;
   button.layer.cornerRadius = radius;
   button.clipsToBounds = YES;
@@ -70,7 +73,7 @@ UIColor *normalColor;
   for (NSInteger i = 0; i < self.subviews.count; i++) {
     UIView *v = self.subviews[i];
     CGRect frame = v.frame;
-    frame.origin.y = self.frame.size.height - self.frame.size.width;
+    frame.origin.y = self.frame.size.height - self.frame.size.width + (i < self.subviews.count - 1 ? (startSize - size) / 2 : 0);
     v.frame = frame;
   }
 }
@@ -79,9 +82,10 @@ UIColor *normalColor;
 {
   if (expanded) {
     [UIView animateWithDuration:0.4 animations:^{
-      for (UIView *v in self.subviews) {
+      for (NSInteger i = 0; i < self.subviews.count - 1; i++) {
+        UIView *v = self.subviews[i];
         CGRect frame = v.frame;
-        frame.origin.y = (self.subviews.count - 1) * (self.frame.size.width + gap);
+        frame.origin.y = self.frame.size.height - self.frame.size.width + (startSize - size) / 2;
         v.frame = frame;
       }
     }];
@@ -90,7 +94,7 @@ UIColor *normalColor;
       for (NSInteger i = 0; i < self.subviews.count - 1; i++) {
         UIView *v = self.subviews[i];
         CGRect frame = v.frame;
-        frame.origin.y -= (i + 1) * (self.frame.size.width + gap);
+        frame.origin.y -= (i + 1) * (size + gap) + (startGap - gap + (startSize - size) / 2);
         v.frame = frame;
       }
     }];
@@ -101,17 +105,8 @@ UIColor *normalColor;
 
 - (void)collapse
 {
-  if (expanded) {
-    [UIView animateWithDuration:0.4 animations:^{
-      for (UIView *v in self.subviews) {
-        CGRect frame = v.frame;
-        frame.origin.y = (self.subviews.count - 1) * (self.frame.size.width + gap);
-        v.frame = frame;
-      }
-    }];
-  }
-  expanded = NO;
-  [self.menuDelegate menuButtonTapped];
+  expanded = YES;
+  [self tapAction];
 }
 
 @end

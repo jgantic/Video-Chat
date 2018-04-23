@@ -71,6 +71,7 @@ PODS:
   - Reachability (3.1.1)
   - RKDropdownAlert (0.3.0)
   - Specta (0.2.1)
+  - TwilioVideo (1.4.0)
   - UIColor+Hex (1.0.1):
     - UIColor+Hex/NSColor (= 1.0.1)
     - UIColor+Hex/UIColor (= 1.0.1)
@@ -101,6 +102,7 @@ DEPENDENCIES:
   - Parse
   - RKDropdownAlert
   - Specta (~> 0.2.1)
+  - TwilioVideo (~> 1.0)
   - UIColor+Hex
   - VKFoundation (= 0.1.1)
   - XCDYouTubeKit (~> 2.5)
@@ -129,10 +131,11 @@ SPEC CHECKSUMS:
   Reachability: dd9aa4fb6667b9f787690a74f53cb7634ce99893
   RKDropdownAlert: f4b3364c251829ad439dc666836a1f2dad26f4c7
   Specta: 15a276a6343867b426d5ed135d5aa4d04123a573
+  TwilioVideo: d2c6c2d0e3aa058ef10e9639c1f864129205dfca
   UIColor+Hex: 9fee91bb8e19f17dd40a79ae1e98949a6a84489d
   VKFoundation: a3d26de016870f705a256c5c6dbab57865c4e99a
   XCDYouTubeKit: dccfe0c17dd5c5187969ec27e93069573badb08f
 
-PODFILE CHECKSUM: 53a5e2472f05233e65526ca0f5367a8d2f10021b
+PODFILE CHECKSUM: 6b75eb974ce971d9db4a345ae8fa31d9c737ba74
 
 COCOAPODS: 1.4.0

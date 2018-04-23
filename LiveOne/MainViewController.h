@@ -35,7 +35,7 @@
 @property (strong, nonatomic) UIView *buttonsView;
 @property (nonatomic, strong) VKVideoPlayer* player;
 @property (nonatomic, strong) UISlider *slider;
-@property (nonatomic, strong) UIView *regView;
+@property (nonatomic, strong) UIView *videoCallView;
 @property (nonatomic, strong) UIView *storeView;
 
 @end
