@@ -2537,9 +2537,10 @@ confirming your entry shortly.</string>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ece-hf-kjm">
-                                        <rect key="frame" x="146" y="456" width="50" height="50"/>
+                                        <rect key="frame" x="151" y="456" width="40" height="40"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="J23-lg-HcV"/>
                                             <constraint firstAttribute="width" secondItem="Ece-hf-kjm" secondAttribute="height" multiplier="1:1" id="LB8-ga-2Rg"/>
                                         </constraints>
                                         <state key="normal" image="end-call.png"/>
